@@ -3,6 +3,10 @@ import './app.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import Navbar from './components/layout/navbar';
 import M from 'materialize-css/dist/js/materialize.min.js';
+import Paralax from './components/layout/paralax';
+import Skills from './components/layout/skills';
+
+import background1 from './img/background1.jpg';
 
 const App = () => {
   useEffect(() => {
@@ -11,9 +15,48 @@ const App = () => {
   });
   return (
     <Fragment>
+      <Navbar />
+
+      <Paralax />
       <div className="container">
-        <Navbar />
+        <Skills />
+        <div className="carousel">
+          <a className="carousel-item" href="#one!">
+            <img className="materialboxed" width="350" src={background1} />
+          </a>
+          <a className="carousel-item" href="#one!">
+            <img className="materialboxed" width="350" src={background1} />
+          </a>
+          <a className="carousel-item" href="#one!">
+            <img className="materialboxed" width="350" src={background1} />
+          </a>
+          <a className="carousel-item" href="#one!">
+            <img className="materialboxed" width="350" src={background1} />
+          </a>
+          <a className="carousel-item" href="#one!">
+            <img className="materialboxed" width="350" src={background1} />
+          </a>
+        </div>
       </div>
+      <Paralax />
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
     </Fragment>
   );
 };

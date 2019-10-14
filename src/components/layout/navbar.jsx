@@ -3,10 +3,10 @@ import React, { Fragment } from 'react';
 const Navbar = () => {
   return (
     <Fragment>
-      <nav className="nav-extended">
+      <nav className="nav-extended purple accent-4">
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo">
-            Logo
+          <a href="#" className="brand-logo" style={{ marginLeft: '15px' }}>
+            Portfolio
           </a>
           <a href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
