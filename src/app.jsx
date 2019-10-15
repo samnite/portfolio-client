@@ -6,7 +6,6 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import Paralax from './components/layout/paralax';
 import Skills from './components/layout/skills';
 
-import background1 from './img/background1.jpg';
 import Slider from './components/layout/slider';
 
 const App = () => {
@@ -23,25 +22,6 @@ const App = () => {
         <Skills />
         <Slider />
       </div>
-      <Paralax />
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
     </Fragment>
   );
 };

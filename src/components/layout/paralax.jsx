@@ -14,7 +14,7 @@ const Paralax = () => {
             <br />
             <br />
           </div>
-          <h1 className="header center blue-text text-lighten-1">Alex G.</h1>
+          <h1 className="header center cyan-text">Alex G.</h1>
           <div className="row center">
             <h5 className="header col s12 cyan-text text-lighten-5">
               A modern front-end developer on React
