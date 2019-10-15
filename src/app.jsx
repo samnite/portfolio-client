@@ -7,6 +7,7 @@ import Paralax from './components/layout/paralax';
 import Skills from './components/layout/skills';
 
 import background1 from './img/background1.jpg';
+import Slider from './components/layout/slider';
 
 const App = () => {
   useEffect(() => {
@@ -20,23 +21,7 @@ const App = () => {
       <Paralax />
       <div className="container">
         <Skills />
-        <div className="carousel">
-          <a className="carousel-item" href="#one!">
-            <img className="materialboxed" width="350" src={background1} />
-          </a>
-          <a className="carousel-item" href="#one!">
-            <img className="materialboxed" width="350" src={background1} />
-          </a>
-          <a className="carousel-item" href="#one!">
-            <img className="materialboxed" width="350" src={background1} />
-          </a>
-          <a className="carousel-item" href="#one!">
-            <img className="materialboxed" width="350" src={background1} />
-          </a>
-          <a className="carousel-item" href="#one!">
-            <img className="materialboxed" width="350" src={background1} />
-          </a>
-        </div>
+        <Slider />
       </div>
       <Paralax />
       <h1>test</h1>
