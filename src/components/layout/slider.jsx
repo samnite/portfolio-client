@@ -1,7 +1,7 @@
-import React from 'react';
-import background1 from '../../img/background1.jpg';
-import background2 from '../../img/background2.jpg';
-import background3 from '../../img/background3.jpg';
+import React from "react";
+import background1 from "../../img/background/background1.jpg";
+import background2 from "../../img/background/background2.jpg";
+import background3 from "../../img/background/background3.jpg";
 
 const Slider = () => {
   return (

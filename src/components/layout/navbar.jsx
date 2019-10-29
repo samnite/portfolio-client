@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
   position: sticky;
+  z-index: 1;
   top: 0;
   left: 0;
   color: #fff;
@@ -14,9 +15,10 @@ const StyledNavbar = styled.nav`
   padding: 1rem;
   text-align: center;
   align-items: center;
+  font-size: 0.75rem;
 
   span {
-    color: var(--primary-color);
+    color: var(--primary-hover-color);
   }
 
   ul {
@@ -29,7 +31,7 @@ const StyledNavbar = styled.nav`
         border: #fff;
         color: #ccc;
         transition: all 0.5s;
-        padding: 0.75rem;
+        padding: 0.75rem 0.5rem;
         margin: 0 0.25rem;
         border-radius: 5px;
 
