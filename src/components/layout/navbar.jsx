@@ -15,7 +15,6 @@ const StyledNavbar = styled.nav`
   padding: 1rem;
   text-align: center;
   align-items: center;
-  font-size: 0.75rem;
 
   span {
     color: var(--primary-hover-color);
@@ -61,6 +60,11 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="https://github.com/samnite" target="_blank">
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </a>
           </li>
         </ul>
       </StyledNavbar>

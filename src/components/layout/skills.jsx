@@ -38,7 +38,7 @@ const StyledSkillCard = styled.div`
 const Skills = () => {
   return (
     <Fragment>
-      <StyledLHead>My Tech</StyledLHead>
+      <StyledLHead>My Skills</StyledLHead>
       <StyledSkills>
         <StyledSkillCard>
           <FontAwesomeIcon icon={faReact} size="3x" color="cyan" />

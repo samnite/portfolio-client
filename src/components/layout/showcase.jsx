@@ -22,6 +22,16 @@ const StyledShowCaseContent = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  span {
+    color: var(--primary-hover-color);
+  }
+  div {
+    width: 50%;
+    padding: 2rem 0;
+    p {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 const Showcase = () => {
@@ -29,13 +39,22 @@ const Showcase = () => {
     <Parallax bgImage={background} strength={600}>
       <StyledShowCase>
         <StyledShowCaseContent>
-          <h1>Hi, I'm Alex Gribenchenko</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Eveniet,modi nobis! Ab illo optio ullam?
-          </p>
-          <StyledPrimaryButton href="http://ya.ru" target="_blank">
-            Read More
+          <h1>
+            Hi, I'm <span>Alex</span> Gribenchenko
+          </h1>
+          <div>
+            <p>
+              I'm Ukraine-based freelancer. I'm working remotely on projects for
+              clients all over the world. I design and code beautifully simple
+              things, and I love what I do.
+            </p>
+          </div>
+
+          <StyledPrimaryButton
+            href="https://github.com/samnite"
+            target="_blank"
+          >
+            GitHub Profile
           </StyledPrimaryButton>
         </StyledShowCaseContent>
       </StyledShowCase>
