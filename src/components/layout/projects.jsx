@@ -14,6 +14,9 @@ const StyledProjects = styled.div`
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 1.5rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const StyledProjectCard = styled.div`
   text-align: center;
@@ -23,23 +26,40 @@ const StyledProjectCard = styled.div`
   padding: 1rem 0.5rem;
   border-radius: 25px;
   img {
-    width: 300px;
+    width: 200px;
     padding: 1rem 0;
-    transition: all 1s;
+    transition: all 1s ease-in-out;
   }
   #left {
     &:hover {
-      transform: scale(2, 2) translate(50%);
+      transform: scale(3, 3) translate(50%);
     }
   }
   #top {
     &:hover {
-      transform: scale(2, 2);
+      transform: scale(3, 3);
     }
   }
   #right {
     &:hover {
-      transform: scale(2, 2) translate(-50%);
+      transform: scale(3, 3) translate(-50%);
+    }
+  }
+  @media (max-width: 768px) {
+    #left {
+      &:hover {
+        transform: none;
+      }
+    }
+    #top {
+      &:hover {
+        transform: none;
+      }
+    }
+    #right {
+      &:hover {
+        transform: none;
+      }
     }
   }
 `;
