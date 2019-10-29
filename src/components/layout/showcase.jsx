@@ -32,6 +32,11 @@ const StyledShowCaseContent = styled.div`
       font-size: 1.2rem;
     }
   }
+  @media (max-width: 768px) {
+    div {
+      width: 100%;
+    }
+  }
 `;
 
 const Showcase = () => {
@@ -45,17 +50,10 @@ const Showcase = () => {
           <div>
             <p>
               I'm Ukraine-based freelancer. I'm working remotely on projects for
-              clients all over the world. I design and code beautifully simple
-              things, and I love what I do.
+              clients all over the world. I design and code beautiful, and I
+              love what I do.
             </p>
           </div>
-
-          <StyledPrimaryButton
-            href="https://github.com/samnite"
-            target="_blank"
-          >
-            GitHub Profile
-          </StyledPrimaryButton>
         </StyledShowCaseContent>
       </StyledShowCase>
     </Parallax>

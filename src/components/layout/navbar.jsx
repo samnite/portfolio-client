@@ -11,6 +11,7 @@ const StyledNavbar = styled.nav`
   color: #fff;
   background: var(--dark-color);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem;
   text-align: center;
@@ -39,6 +40,12 @@ const StyledNavbar = styled.nav`
           background: var(--primary-color);
         }
       }
+    }
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+    ul {
+      margin-top: 0.5rem;
     }
   }
 `;
