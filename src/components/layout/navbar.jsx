@@ -1,93 +1,67 @@
-import React, { Fragment } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faReact } from '@fortawesome/free-brands-svg-icons';
+import React, { Fragment } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+import styled from "styled-components";
+
+const StyledNavbar = styled.nav`
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: var(--dark-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+
+  span {
+    color: var(--primary-color);
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      //padding: 0.5rem 1rem;
+      a {
+        text-decoration: none;
+        border: #fff;
+        color: #ccc;
+        transition: all 0.5s;
+        padding: 0.75rem;
+        margin: 0 0.25rem;
+        border-radius: 5px;
+
+        &:hover {
+          //color: black;
+          background: var(--primary-color);
+        }
+      }
+    }
+  }
+`;
 
 const Navbar = () => {
-  const dropDown = (
-    <Fragment>
-      <li>
-        <a href="#!">one</a>
-      </li>
-      <li>
-        <a href="#!">two</a>
-      </li>
-      <li>
-        <a href="#!">three</a>
-      </li>
-    </Fragment>
-  );
-
-  const menuItems = <Fragment></Fragment>;
-
   return (
     <Fragment>
-      <nav className="nav-extended purple darken-4">
-        <div className="nav-wrapper">
-          {/*LOGO*/}
-          <a
-            href="#!"
-            className="brand-logo blue-text text-lighten-1"
-            style={{ marginLeft: '15px' }}
-          >
-            <FontAwesomeIcon icon={faReact} />
-          </a>
-          {/*Menu Button on mobile device*/}
-          <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
-            <i className="material-icons">menu</i>
-          </a>
+      <StyledNavbar id="id">
+        <h1>
+          <span>Alex</span>Gribenchenko
+        </h1>
 
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            {/*Menu Items*/}
-            <li>
-              <a href="#!">About</a>
-            </li>
-            <li>
-              <a className="dropdown-trigger" href="#" data-target="dropdown1">
-                Projects<i className="material-icons right">arrow_drop_down</i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/samnite"
-                target="_blank"
-                className="material-icons black-text"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      {/*Mobile menu Items*/}
-      <ul className="sidenav" id="mobile-demo">
-        {/*Menu Items*/}
-        <li>
-          <a href="#!">About</a>
-        </li>
-        <li>
-          <a className="dropdown-trigger" href="#" data-target="dropdown2">
-            Projects<i className="material-icons right">arrow_drop_down</i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/samnite"
-            target="_blank"
-            className="material-icons black-text"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </li>
-      </ul>
-
-      {/*Dropdown Items*/}
-      <ul id="dropdown1" className="dropdown-content cyan-text">
-        {dropDown}
-      </ul>
-      <ul id="dropdown2" className="dropdown-content cyan-text">
-        {dropDown}
-      </ul>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+        </ul>
+      </StyledNavbar>
     </Fragment>
   );
 };

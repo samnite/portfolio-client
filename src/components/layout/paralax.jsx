@@ -1,12 +1,12 @@
-import React from 'react';
-import background1 from '../../img/background1.jpg';
+import React from "react";
+import background1 from "img/background1.jpg";
 
 const Paralax = () => {
   return (
     <div
       id="index-banner"
       className="parallax-container"
-      style={{ height: '400px' }}
+      style={{ height: "400px" }}
     >
       <div className="section no-pad-bot">
         <div className="container">
