@@ -1,7 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 import background from "img/background/background0.jpg";
-import { StyledPrimaryButton } from "../../shared/ui/components";
 import { Parallax } from "react-parallax";
 
 const StyledShowCase = styled.div`
@@ -42,7 +41,7 @@ const StyledShowCaseContent = styled.div`
 const Showcase = () => {
   return (
     <Parallax bgImage={background} strength={600}>
-      <StyledShowCase>
+      <StyledShowCase id="Home">
         <StyledShowCaseContent>
           <h1>
             Hi, I'm <span>Alex</span> Gribenchenko

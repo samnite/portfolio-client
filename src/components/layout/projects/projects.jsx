@@ -19,19 +19,27 @@ import {
 const Projects = () => {
   return (
     <Fragment>
-      <StyledLHead>Projects</StyledLHead>
+      <StyledLHead id="Projects">Projects</StyledLHead>
       <StyledProjects>
         <StyledProjectCard>
           <h3>Contact Keeper</h3>
           <img src={contactKeeper} alt="Contact Keeper" id="left" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <a href="" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
-            <a href="#" title="See Demo ..." id="demo">
+            <a
+              href="https://vast-journey-34926.herokuapp.com/"
+              title="See Demo ..."
+              id="demo"
+            >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
-            <a href="#" title="See Project on GitHub" id="src">
+            <a
+              href="https://github.com/samnite/IT-Logger-React-Redux"
+              title="See Project on GitHub"
+              id="src"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>
@@ -43,10 +51,20 @@ const Projects = () => {
             <a href="#" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
-            <a href="#" title="See Demo ..." id="demo">
+            <a
+              href="https://github-finder-react-ts.netlify.com/"
+              title="See Demo ..."
+              id="demo"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
-            <a href="#" title="See Project on GitHub" id="src">
+            <a
+              href="https://github.com/samnite/ReactJS-GitHub-Finder-TypeScript"
+              title="See Project on GitHub"
+              id="src"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>
@@ -58,10 +76,20 @@ const Projects = () => {
             <a href="#" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
-            <a href="#" title="See Demo ..." id="demo">
+            <a
+              href="https://burger.profikom.pp.ua/"
+              title="See Demo ..."
+              id="demo"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
-            <a href="#" title="See Project on GitHub" id="src">
+            <a
+              href="https://github.com/samnite/Burger-Builder-React.JS"
+              title="See Project on GitHub"
+              id="src"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>
@@ -73,10 +101,20 @@ const Projects = () => {
             <a href="#" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
-            <a href="#" title="See Demo ..." id="demo">
+            <a
+              href="https://gifted-pike-a9b5e0.netlify.com/"
+              title="See Demo ..."
+              id="demo"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
-            <a href="#" title="See Project on GitHub" id="src">
+            <a
+              href="https://github.com/samnite/BlackJack-React.js-"
+              title="See Project on GitHub"
+              id="src"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>
@@ -89,10 +127,15 @@ const Projects = () => {
             <a href="#" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
-            <a href="#" title="See Demo ..." id="demo">
+            <a href="#" title="See Demo ..." id="demo" hidden>
               <FontAwesomeIcon icon={faDesktop} />
             </a>
-            <a href="#" title="See Project on GitHub" id="src">
+            <a
+              href="https://github.com/samnite/IT-Logger-React-Redux"
+              title="See Project on GitHub"
+              id="src"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>
@@ -104,10 +147,15 @@ const Projects = () => {
             <a href="#" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
-            <a href="#" title="See Demo ..." id="demo">
+            <a
+              href="https://dev-profikom-portfolio.pantheonsite.io/"
+              title="See Demo ..."
+              id="demo"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
-            <a href="#" title="See Project on GitHub" id="src">
+            <a href="#" title="See Project on GitHub" id="src" hidden>
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>

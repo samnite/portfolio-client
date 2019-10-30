@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const StyledNavbar = styled.nav`
   position: sticky;
@@ -25,8 +26,8 @@ const StyledNavbar = styled.nav`
     display: flex;
     list-style: none;
     li {
-      //padding: 0.5rem 1rem;
       a {
+        cursor: pointer;
         text-decoration: none;
         border: #fff;
         color: #ccc;
@@ -36,7 +37,6 @@ const StyledNavbar = styled.nav`
         border-radius: 5px;
 
         &:hover {
-          //color: black;
           background: var(--primary-color);
         }
       }
@@ -51,22 +51,42 @@ const StyledNavbar = styled.nav`
 `;
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <Fragment>
-      <StyledNavbar id="id">
+      <StyledNavbar>
         <h1>
           <span>Alex</span>Gribenchenko
         </h1>
 
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link
+              to="#"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={scrollToTop}
+            >
+              Home
+            </Link>
           </li>
           <li>
             <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <Link
+              to="Projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Projects
+            </Link>
           </li>
           <li>
             <a href="https://github.com/samnite" target="_blank">

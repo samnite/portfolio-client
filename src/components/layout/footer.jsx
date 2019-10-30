@@ -9,13 +9,16 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const StyledFooter = styled.footer`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 1rem 1rem 0 1rem;
   background: #333;
   color: #ccc;
+  div {
+    margin: 0 4rem;
+  }
   p {
     margin-top: 0.5rem;
   }
@@ -23,13 +26,15 @@ const StyledFooter = styled.footer`
     padding: 0.2rem 0.5rem;
     border-radius: 10px;
     color: #ccc;
+    transition: all 1s;
     &:hover {
       background: var(--primary-color);
     }
   }
   @media (max-width: 768px) {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     p {
       border-bottom: 1px dotted #444;
       margin: 0;

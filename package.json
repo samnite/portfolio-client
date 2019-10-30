@@ -13,6 +13,7 @@
     "react-modal-image": "^2.5.0",
     "react-parallax": "^2.2.4",
     "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.14",
     "styled-components": "^5.0.0-beta.11"
   },
   "scripts": {
