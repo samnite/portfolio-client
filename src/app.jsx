@@ -7,7 +7,7 @@ import Skills from "components/layout/skills";
 
 import Showcase from "./components/layout/showcase";
 import { StyledContainer } from "./shared/ui/components";
-import Projects from "./components/layout/projects";
+import Projects from "./components/layout/projects/projects";
 
 const App = () => {
   useEffect(() => {

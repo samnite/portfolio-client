@@ -6,7 +6,7 @@ import {
   faCss3,
   faJs,
   faSass,
-  faNodeJs
+  faWordpressSimple
 } from "@fortawesome/free-brands-svg-icons";
 import tsLogo from "../../img/logos/typescript.svg";
 import firebaseLogo from "../../img/logos/firebase.svg";
@@ -69,8 +69,8 @@ const Skills = () => {
           <h2>Firebase</h2>
         </StyledSkillCard>
         <StyledSkillCard>
-          <FontAwesomeIcon icon={faNodeJs} size="3x" color="green" />
-          <h2>NodeJS</h2>
+          <FontAwesomeIcon icon={faWordpressSimple} size="3x" color="#00749C" />
+          <h2>WordPress</h2>
         </StyledSkillCard>
       </StyledSkills>
     </Fragment>
