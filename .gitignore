@@ -25,3 +25,4 @@ yarn.lock
 !/firestore.indexes.json
 !/firebase.json
 !/.firebaserc
+!/.firebase/
