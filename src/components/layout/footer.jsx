@@ -63,20 +63,25 @@ const Footer = () => {
         <div>
           <FontAwesomeIcon icon={faEnvelope} size="2x" color="#93cb52" />
           <p>
-            <a href="mailto:samnite87@gmail.com">samnite87@gmail.com</a>
+            <a href="mailto:samnite87@gmail.com">Mail Me</a>
           </p>
         </div>
         <div>
           <FontAwesomeIcon icon={faSkype} size="2x" color="#93cb52" />
           <p>
-            <a href="skype:djsamnite?call">djsamnite</a>
+            <a
+              href="https://join.skype.com/invite/eNxfykF1nU9F"
+              target="_blank"
+            >
+              Call Me
+            </a>
           </p>
         </div>
         <div>
           <FontAwesomeIcon icon={faTelegram} size="2x" color="#93cb52" />
           <p>
             <a href="https://t.me/samnite" target="_blank">
-              samnite
+              Telegram Me
             </a>
           </p>
         </div>
@@ -90,7 +95,8 @@ const Footer = () => {
         </div>
       </StyledFooter>
       <StyledCopy>
-        Copyright &copy; {new Date().getFullYear()}. All Rights Reserved
+        Copyright &copy; {new Date().getFullYear()} Alex Gribenchenko. All
+        Rights Reserved
       </StyledCopy>
     </Fragment>
   );

@@ -24,6 +24,7 @@ export const StyledProjectCard = styled.div`
     padding-top: 1rem;
     transition: all 1s ease-in-out;
   }
+
   #left {
     &:hover {
       transform: scale(2, 2) translate(50%);

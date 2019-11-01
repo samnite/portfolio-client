@@ -32,6 +32,7 @@ const Projects = () => {
               href="https://vast-journey-34926.herokuapp.com/"
               title="See Demo ..."
               id="demo"
+              target="_blank"
             >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
@@ -39,6 +40,7 @@ const Projects = () => {
               href="https://github.com/samnite/IT-Logger-React-Redux"
               title="See Project on GitHub"
               id="src"
+              target="_blank"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>

@@ -3,7 +3,7 @@ import "app.css";
 import Navbar from "components/layout/navbar";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-import Home from "./pages/home";
+import Home from "./components/pages/home";
 import Footer from "./components/layout/footer";
 
 const App = () => {
