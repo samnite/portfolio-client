@@ -72,6 +72,7 @@ const Footer = () => {
             <a
               href="https://join.skype.com/invite/eNxfykF1nU9F"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Call Me
             </a>
@@ -80,7 +81,11 @@ const Footer = () => {
         <div>
           <FontAwesomeIcon icon={faTelegram} size="2x" color="#93cb52" />
           <p>
-            <a href="https://t.me/samnite" target="_blank">
+            <a
+              href="https://t.me/samnite"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Telegram Me
             </a>
           </p>
@@ -88,7 +93,11 @@ const Footer = () => {
         <div>
           <FontAwesomeIcon icon={faFacebook} size="2x" color="#93cb52" />
           <p>
-            <a href="https://www.facebook.com/samnite87" target="_blank">
+            <a
+              href="https://www.facebook.com/samnite87"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Alex Gribenchenko
             </a>
           </p>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledPrimaryButton = styled.a`
   display: inline-block;
+  cursor: pointer;
   color: #fff;
   background: var(--primary-color);
   padding: 0.5rem 2rem;

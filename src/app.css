@@ -31,6 +31,10 @@ a {
 p {
   margin: 0.75rem 0;
 }
+
+ul {
+  list-style: none;
+}
 /*nav ul a,*/
 /*nav .brand-logo {*/
 /*  color: #444;*/

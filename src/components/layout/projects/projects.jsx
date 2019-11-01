@@ -25,7 +25,7 @@ const Projects = () => {
           <h3>Contact Keeper</h3>
           <img src={contactKeeper} alt="Contact Keeper" id="left" />
           <StyledCardLinks>
-            <a href="" title="See More..." id="more">
+            <a href="#" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
             </a>
             <a
@@ -33,6 +33,7 @@ const Projects = () => {
               title="See Demo ..."
               id="demo"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
@@ -41,6 +42,7 @@ const Projects = () => {
               title="See Project on GitHub"
               id="src"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -58,6 +60,7 @@ const Projects = () => {
               title="See Demo ..."
               id="demo"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
@@ -66,6 +69,7 @@ const Projects = () => {
               title="See Project on GitHub"
               id="src"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -83,6 +87,7 @@ const Projects = () => {
               title="See Demo ..."
               id="demo"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
@@ -91,6 +96,7 @@ const Projects = () => {
               title="See Project on GitHub"
               id="src"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -108,6 +114,7 @@ const Projects = () => {
               title="See Demo ..."
               id="demo"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faDesktop} />
             </a>
@@ -116,6 +123,7 @@ const Projects = () => {
               title="See Project on GitHub"
               id="src"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -137,6 +145,7 @@ const Projects = () => {
               title="See Project on GitHub"
               id="src"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -154,6 +163,7 @@ const Projects = () => {
               title="See Demo ..."
               id="demo"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faDesktop} />
             </a>

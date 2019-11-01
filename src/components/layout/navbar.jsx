@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as ReactLink } from "react-router-dom";
 
 const StyledNavbar = styled.nav`
   position: sticky;
@@ -54,6 +55,7 @@ const Navbar = () => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+
   return (
     <Fragment>
       <StyledNavbar>
@@ -63,16 +65,7 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <Link
-              to="#"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={scrollToTop}
-            >
-              Home
-            </Link>
+            <ReactLink to="/">Home</ReactLink>
           </li>
           <li>
             <a href="#">About</a>
@@ -89,7 +82,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="https://github.com/samnite" target="_blank">
+            <a
+              href="https://github.com/samnite"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} size="lg" />
             </a>
           </li>
