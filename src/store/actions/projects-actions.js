@@ -1,40 +1,26 @@
-import { GET_PROJECT, SET_LOADING } from "../types";
+import { GET_PROJECT } from "../types";
 import { config } from "../../firebase-config";
 import * as firebase from "firebase";
 
-export const getProject = () => async dispatch => {
-  console.log("work from getProject");
-  firebase.initializeApp(config);
-  const db = firebase.firestore();
-  const docRef = db.collection("projects").doc("github-finder");
+firebase.initializeApp(config);
+const db = firebase.firestore();
+
+export const getProject = project_name => async dispatch => {
+  const docRef = db.collection("projects").doc(project_name);
   try {
-    setLoading();
-
-    await docRef
-      .get()
-      .then(function(doc) {
-        if (doc.exists) {
-          console.log("Document data:", doc.data());
-          dispatch({
-            type: GET_PROJECT,
-            payload: doc.data()
-          });
-        } else {
-          // doc.data() will be undefined in this case
-          console.log("No such document!");
-        }
-      })
-      .catch(function(error) {
-        console.log("Error getting document:", error);
-      });
+    await docRef.get().then(doc => {
+      if (doc.exists) {
+        console.log("Document data:", doc.data());
+        dispatch({
+          type: GET_PROJECT,
+          payload: doc.data()
+        });
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    });
   } catch (err) {
-    console.log(err);
+    console.log("Error getting document:", err);
   }
-};
-
-export const setLoading = () => {
-  console.log("Working Loading");
-  return {
-    type: SET_LOADING
-  };
 };

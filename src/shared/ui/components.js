@@ -6,6 +6,7 @@ export const StyledPrimaryButton = styled.a`
   color: #fff;
   background: var(--primary-color);
   padding: 0.5rem 2rem;
+  margin: 1rem 0;
   border: none;
   border-radius: 5px;
   transition: all 0.5s;

@@ -12,7 +12,8 @@ import Project from "./components/pages/project";
 import NotFound from "./components/pages/not-found";
 
 const App = () => {
-  useEffect(() => {});
+  useEffect(() => {}, []);
+
   return (
     <Provider store={store}>
       <Router>
