@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { StyledLHead } from "../../../shared/ui/components";
+import { Link as ReactLink } from "react-router-dom";
 
 import blackjack from "../../../img/projects/blackjack.png";
 import burger from "../../../img/projects/burger-builder.png";
@@ -25,9 +26,13 @@ const Projects = () => {
           <h3>Contact Keeper</h3>
           <img src={contactKeeper} alt="Contact Keeper" id="left" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <ReactLink
+              to="/projects/contact-keeper"
+              title="See More..."
+              id="more"
+            >
               <FontAwesomeIcon icon={faIdCard} />
-            </a>
+            </ReactLink>
             <a
               href="https://vast-journey-34926.herokuapp.com/"
               title="See Demo ..."
@@ -52,9 +57,13 @@ const Projects = () => {
           <h3>GitHub Finder</h3>
           <img src={githubFinder} alt="GitHub Finder" id="top" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <ReactLink
+              to="/projects/github-finder"
+              title="See More..."
+              id="more"
+            >
               <FontAwesomeIcon icon={faIdCard} />
-            </a>
+            </ReactLink>
             <a
               href="https://github-finder-react-ts.netlify.com/"
               title="See Demo ..."

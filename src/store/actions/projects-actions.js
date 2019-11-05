@@ -1,4 +1,4 @@
-import { GET_PROJECT } from "../types";
+import { GET_PROJECT, SET_MAIN_PAGE } from "../types";
 import { config } from "../../firebase-config";
 import * as firebase from "firebase";
 
@@ -23,4 +23,11 @@ export const getProject = project_name => async dispatch => {
   } catch (err) {
     console.log("Error getting document:", err);
   }
+};
+
+export const setMainPage = isMain => {
+  return {
+    type: SET_MAIN_PAGE,
+    payload: isMain
+  };
 };

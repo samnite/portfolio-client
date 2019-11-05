@@ -1,8 +1,9 @@
-import { GET_PROJECT, SET_LOADING } from "../types";
+import { GET_PROJECT, SET_MAIN_PAGE } from "../types";
 
 const initialState = {
   project: null,
-  error: null
+  error: null,
+  isMain: true
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +12,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         project: action.payload
+      };
+    case SET_MAIN_PAGE:
+      return {
+        ...state,
+        isMain: action.payload
       };
 
     default:

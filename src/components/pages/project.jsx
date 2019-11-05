@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import {
   StyledContainer,
-  StyledPrimaryButton
+  StyledPrimaryButton,
+  StyledSpinner
 } from "../../shared/ui/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop, faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "react-redux";
-import { getProject } from "../../store/actions/projects-actions";
+import { getProject, setMainPage } from "../../store/actions/projects-actions";
 import { StyledCardLinks } from "../layout/projects/components";
+import { Link as ReactLink } from "react-router-dom";
 
 const StyledProject = styled.div`
   display: grid;
@@ -34,16 +36,21 @@ const StyledProject = styled.div`
   }
 `;
 
-const Project = ({ getProject, match, project: { project } }) => {
+const Project = ({
+  getProject,
+  setMainPage,
+  match,
+  project: { project, isMain }
+}) => {
   useEffect(() => {
+    setMainPage(false);
     getProject(match.params.project);
   }, [match.params.project]);
 
-  if (project === null) return <p>Loading...</p>;
+  if (project === null) return <StyledSpinner>Loading...</StyledSpinner>;
 
   return (
     <StyledContainer>
-      <StyledPrimaryButton>Back</StyledPrimaryButton>
       <StyledProject>
         <div>
           <h2>{project.name}</h2>
@@ -95,5 +102,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getProject }
+  { getProject, setMainPage }
 )(Project);

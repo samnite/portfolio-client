@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { setMainPage } from "../../store/actions/projects-actions";
+import { connect } from "react-redux";
 
-const NotFound = () => {
+const NotFound = ({ setMainPage }) => {
+  useEffect(() => {
+    setMainPage(false);
+  }, []);
   return <div>Page not Found</div>;
 };
 
-export default NotFound;
+export default connect(
+  null,
+  { setMainPage }
+)(NotFound);

@@ -1,10 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Showcase from "../layout/showcase";
 import { StyledContainer } from "../../shared/ui/components";
 import Skills from "../layout/skills";
 import Projects from "../layout/projects/projects";
+import { setMainPage } from "../../store/actions/projects-actions";
+import { connect } from "react-redux";
 
-const Home = () => {
+const Home = ({ setMainPage }) => {
+  useEffect(() => {
+    setMainPage(true);
+  }, []);
   return (
     <Fragment>
       <Showcase />
@@ -16,4 +21,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(
+  null,
+  { setMainPage }
+)(Home);

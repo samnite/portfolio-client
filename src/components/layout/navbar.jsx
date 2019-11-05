@@ -4,6 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Link as ReactLink } from "react-router-dom";
+import { connect } from "react-redux";
 
 const StyledNavbar = styled.nav`
   position: sticky;
@@ -51,7 +52,7 @@ const StyledNavbar = styled.nav`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ project: { isMain } }) => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -65,21 +66,38 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <ReactLink to="/">Home</ReactLink>
+            {isMain ? (
+              <Link
+                to=""
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={scrollToTop}
+              >
+                Home
+              </Link>
+            ) : (
+              <ReactLink to="/">Home</ReactLink>
+            )}
           </li>
           <li>
-            <a href="#">About</a>
+            <ReactLink to="/about">About</ReactLink>
           </li>
           <li>
-            <Link
-              to="Projects"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Projects
-            </Link>
+            {isMain ? (
+              <Link
+                to="Projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={scrollToTop}
+              >
+                Projects
+              </Link>
+            ) : null}
           </li>
           <li>
             <a
@@ -96,4 +114,8 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = state => ({
+  project: state.project
+});
+
+export default connect(mapStateToProps)(Navbar);
