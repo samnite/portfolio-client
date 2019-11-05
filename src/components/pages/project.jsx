@@ -20,7 +20,11 @@ const StyledProject = styled.div`
   margin: 1rem 0;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
+  ul {
+    margin: 1rem;
+  }
+
   img {
     height: 250px;
   }

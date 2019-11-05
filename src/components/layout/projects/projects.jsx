@@ -88,9 +88,13 @@ const Projects = () => {
           <h3>Burger Builder</h3>
           <img src={burger} alt="Burger Builder" id="right" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <ReactLink
+              to="/projects/burger-builder"
+              title="See More..."
+              id="more"
+            >
               <FontAwesomeIcon icon={faIdCard} />
-            </a>
+            </ReactLink>
             <a
               href="https://burger.profikom.pp.ua/"
               title="See Demo ..."

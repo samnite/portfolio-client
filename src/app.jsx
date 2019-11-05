@@ -34,3 +34,5 @@ export default connect(
   mapStateToProps,
   { setMainPage }
 )(App);
+
+//TODO Add ClearProject function

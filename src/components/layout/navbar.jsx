@@ -93,7 +93,6 @@ const Navbar = ({ project: { isMain } }) => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                onClick={scrollToTop}
               >
                 Projects
               </Link>
