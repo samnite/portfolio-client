@@ -72,24 +72,28 @@ const Project = ({ getProject, setMainPage, match, project: { project } }) => {
             </li>
           </ul>
           <StyledCardLinks>
-            <a
-              href={project.live_url}
-              title="See Demo ..."
-              id="demo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDesktop} size="2x" />
-            </a>
-            <a
-              href={project.github_url}
-              title="See Project on GitHub"
-              id="src"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} size="2x" />
-            </a>
+            {project.live_url && (
+              <a
+                href={project.live_url}
+                title="See Demo ..."
+                id="demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faDesktop} size="2x" />
+              </a>
+            )}
+            {project.github_url && (
+              <a
+                href={project.github_url}
+                title="See Project on GitHub"
+                id="src"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+            )}
           </StyledCardLinks>
         </div>
       </StyledProject>

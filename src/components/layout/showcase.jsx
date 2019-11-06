@@ -48,9 +48,9 @@ const Showcase = () => {
           </h1>
           <div>
             <p>
-              I'm Ukraine-based freelancer. I work remotely for clients all over
-              the world. I specialize in front-end development, and I love what
-              I do.
+              I'm Ukraine-based freelancer. I work for clients all over the
+              world. I specialize in front-end development, and I love what I
+              do.
             </p>
           </div>
         </StyledShowCaseContent>

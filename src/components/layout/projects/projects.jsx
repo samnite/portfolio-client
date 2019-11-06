@@ -43,7 +43,7 @@ const Projects = () => {
               <FontAwesomeIcon icon={faDesktop} />
             </a>
             <a
-              href="https://github.com/samnite/IT-Logger-React-Redux"
+              href="https://github.com/samnite/Contact-Keeper-TS"
               title="See Project on GitHub"
               id="src"
               target="_blank"
@@ -119,7 +119,11 @@ const Projects = () => {
           <h3>BlackJack Game</h3>
           <img src={blackjack} alt="BlackJack" id="left" />
           <StyledCardLinks>
-            <ReactLink to="/projects/blackjack" title="See More..." id="more">
+            <ReactLink
+              to="/projects/blackjack-game"
+              title="See More..."
+              id="more"
+            >
               <FontAwesomeIcon icon={faIdCard} />
             </ReactLink>
             <a

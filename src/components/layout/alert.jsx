@@ -7,6 +7,7 @@ const Alert = ({ project: { alert } }) => {
     if (alert) {
       error(alert);
     }
+    // eslint-disable-next-line
   }, [alert]);
 
   const error = () => {
