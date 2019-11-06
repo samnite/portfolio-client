@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ConnectedRouter } from "connected-react-router";
 import Navbar from "components/layout/navbar";
 import Home from "./components/pages/home";
 import Footer from "./components/layout/footer";
@@ -8,9 +9,9 @@ import Project from "./components/pages/project";
 import NotFound from "./components/pages/not-found";
 import Alert from "./components/layout/alert";
 
-const App = () => {
+const App = ({ history }) => {
   return (
-    <Router>
+    <ConnectedRouter history={history}>
       <Navbar />
       <Alert />
       <Switch>
@@ -20,7 +21,7 @@ const App = () => {
         <Route component={NotFound} />
       </Switch>
       <Footer />
-    </Router>
+    </ConnectedRouter>
   );
 };
 

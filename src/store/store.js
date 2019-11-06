@@ -1,16 +1,25 @@
-import { createStore, applyMiddleware } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import rootReducer from "./reducers";
+import { connectRouter, routerMiddleware } from "connected-react-router";
+import projectReducer from "./reducers/projects-reducer";
 
-const initialState = {};
+const rootReducer = history =>
+  combineReducers({
+    router: connectRouter(history),
+    project: projectReducer
+  });
 
-const middleware = [thunk];
+export default function configureStore(history) {
+  const initialState = {};
 
-const store = createStore(
-  rootReducer,
-  initialState,
-  composeWithDevTools(applyMiddleware(...middleware))
-);
+  const middleware = [thunk];
 
-export default store;
+  return createStore(
+    rootReducer(history),
+    initialState,
+    composeWithDevTools(
+      applyMiddleware(...middleware, routerMiddleware(history))
+    )
+  );
+}
