@@ -1,10 +1,18 @@
-import { GET_PROJECT, SET_MAIN_PAGE } from "../types";
+import { GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
 import { config } from "../../firebase-config";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
 firebase.initializeApp(config);
 const db = firebase.firestore();
+
+export const setAlert = alert => {
+  console.log("work in setAlert");
+  return {
+    type: SET_ALERT,
+    payload: alert
+  };
+};
 
 export const getProject = project_name => async dispatch => {
   const docRef = db.collection("projects").doc(project_name);
@@ -17,7 +25,10 @@ export const getProject = project_name => async dispatch => {
         });
       } else {
         // doc.data() will be undefined in this case
-        console.log("No such document!");
+        dispatch({
+          type: SET_ALERT,
+          payload: "No such document"
+        });
       }
     });
   } catch (err) {
