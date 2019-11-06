@@ -119,9 +119,9 @@ const Projects = () => {
           <h3>BlackJack Game</h3>
           <img src={blackjack} alt="BlackJack" id="left" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <ReactLink to="/projects/blackjack" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
-            </a>
+            </ReactLink>
             <a
               href="https://gifted-pike-a9b5e0.netlify.com/"
               title="See Demo ..."
@@ -147,12 +147,10 @@ const Projects = () => {
           {/*  This image resized manually in StyledProjectCard nth-child(5) */}
           <img src={itLogger} alt="IT Logger" id="top" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <ReactLink to="/projects/it-logger" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
-            </a>
-            <a href="#" title="See Demo ..." id="demo" hidden>
-              <FontAwesomeIcon icon={faDesktop} />
-            </a>
+            </ReactLink>
+
             <a
               href="https://github.com/samnite/IT-Logger-React-Redux"
               title="See Project on GitHub"
@@ -168,9 +166,9 @@ const Projects = () => {
           <h3>Profikom site</h3>
           <img src={profikom} alt="Profikom" id="right" />
           <StyledCardLinks>
-            <a href="#" title="See More..." id="more">
+            <ReactLink to="/projects/profikom" title="See More..." id="more">
               <FontAwesomeIcon icon={faIdCard} />
-            </a>
+            </ReactLink>
             <a
               href="https://dev-profikom-portfolio.pantheonsite.io/"
               title="See Demo ..."
@@ -179,9 +177,6 @@ const Projects = () => {
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faDesktop} />
-            </a>
-            <a href="#" title="See Project on GitHub" id="src" hidden>
-              <FontAwesomeIcon icon={faGithub} />
             </a>
           </StyledCardLinks>
         </StyledProjectCard>

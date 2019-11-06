@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "components/layout/navbar";
@@ -11,7 +11,7 @@ import { setMainPage } from "./store/actions/projects-actions";
 import { connect } from "react-redux";
 import ModalWindow from "./components/layout/modal";
 
-const App = ({ setMainPage, project: { isMain } }) => {
+const App = () => {
   return (
     <Router>
       <Navbar />
@@ -27,12 +27,12 @@ const App = ({ setMainPage, project: { isMain } }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  project: state.project
-});
+// const mapStateToProps = state => ({
+//   project: state.project
+// });
 
 export default connect(
-  mapStateToProps,
+  null,
   { setMainPage }
 )(App);
 

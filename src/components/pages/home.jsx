@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 const Home = ({ setMainPage }) => {
   useEffect(() => {
     setMainPage(true);
+    // eslint-disable-next-line
   }, []);
   return (
     <Fragment>

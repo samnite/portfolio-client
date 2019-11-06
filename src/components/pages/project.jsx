@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import {
-  StyledContainer,
-  StyledPrimaryButton,
-  StyledSpinner
-} from "../../shared/ui/components";
+import { StyledContainer, StyledSpinner } from "../../shared/ui/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDesktop, faIdCard } from "@fortawesome/free-solid-svg-icons";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "react-redux";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
@@ -45,15 +41,11 @@ const StyledProject = styled.div`
   }
 `;
 
-const Project = ({
-  getProject,
-  setMainPage,
-  match,
-  project: { project, isMain }
-}) => {
+const Project = ({ getProject, setMainPage, match, project: { project } }) => {
   useEffect(() => {
     setMainPage(false);
     getProject(match.params.project);
+    // eslint-disable-next-line
   }, [match.params.project]);
 
   if (project === null) return <StyledSpinner>Loading...</StyledSpinner>;

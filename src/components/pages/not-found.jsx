@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 const NotFound = ({ setMainPage }) => {
   useEffect(() => {
     setMainPage(false);
+    // eslint-disable-next-line
   }, []);
   return <div>Page not Found</div>;
 };

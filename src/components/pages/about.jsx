@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 const About = ({ setMainPage }) => {
   useEffect(() => {
     setMainPage(false);
+    // eslint-disable-next-line
   }, []);
   return <div>This is About Page</div>;
 };

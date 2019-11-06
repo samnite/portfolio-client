@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Modal, Button } from "antd";
-import githubFinder from "../../img/projects/github-finder.png";
+import { Modal } from "antd";
 
 const StyledModal = styled.div`
   display: flex;
@@ -9,6 +8,9 @@ const StyledModal = styled.div`
   justify-content: center;
   img {
     width: 100%;
+    &:hover {
+      cursor: zoom-in;
+    }
   }
 `;
 
