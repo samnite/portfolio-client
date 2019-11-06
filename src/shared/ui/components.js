@@ -116,3 +116,36 @@ export const StyledSpinner = styled.div`
     }
   }
 `;
+
+export const StyledBody = styled.div`
+  @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap"); /* Custom Stylesheet */
+
+  :root {
+    --primary-color: #678d3b;
+    --primary-hover-color: #93cb52;
+    --dark-color: #333;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0.75rem 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+`;

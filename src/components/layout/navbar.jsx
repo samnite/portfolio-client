@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
@@ -21,7 +21,7 @@ const StyledNavbar = styled.nav`
   align-items: center;
 
   span {
-    color: var(--primary-hover-color);
+    color: var(--primary-hover-color) !important;
   }
 
   ul {
@@ -56,6 +56,7 @@ const Navbar = ({ project: { isMain } }) => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+  scrollToTop(); // Not sure
 
   return (
     <Fragment>

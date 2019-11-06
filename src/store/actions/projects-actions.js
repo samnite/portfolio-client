@@ -1,6 +1,7 @@
 import { GET_PROJECT, SET_MAIN_PAGE } from "../types";
 import { config } from "../../firebase-config";
-import * as firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 firebase.initializeApp(config);
 const db = firebase.firestore();
@@ -10,7 +11,6 @@ export const getProject = project_name => async dispatch => {
   try {
     await docRef.get().then(doc => {
       if (doc.exists) {
-        console.log("Document data:", doc.data());
         dispatch({
           type: GET_PROJECT,
           payload: doc.data()

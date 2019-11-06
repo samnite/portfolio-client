@@ -32,6 +32,7 @@ const StyledSkillCard = styled.div`
   h2 {
     font-size: 1rem;
     margin-top: 0.75rem;
+    color: #333;
   }
 `;
 

@@ -11,22 +11,27 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "react-redux";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
 import { StyledCardLinks } from "../layout/projects/components";
-import { Link as ReactLink } from "react-router-dom";
+import ModalWindow from "../layout/modal";
 
 const StyledProject = styled.div`
   display: grid;
+  color: #333;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin: 1rem 0;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  h2 {
+    color: #333;
+  }
+
   ul {
     margin: 1rem;
+    text-align: left;
   }
 
   img {
-    height: 250px;
+    //height: 250px;
   }
   div:last-child {
     //border-left: 1px dotted #333;
@@ -58,7 +63,7 @@ const Project = ({
       <StyledProject>
         <div>
           <h2>{project.name}</h2>
-          <img src={project.img_url} alt="GitHub Finder" />
+          <ModalWindow img={project.img_url} title={project.name} />
         </div>
         <div>
           <ul>
@@ -82,7 +87,7 @@ const Project = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faDesktop} />
+              <FontAwesomeIcon icon={faDesktop} size="2x" />
             </a>
             <a
               href={project.github_url}
@@ -91,7 +96,7 @@ const Project = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </StyledCardLinks>
         </div>

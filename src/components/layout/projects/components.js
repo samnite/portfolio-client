@@ -19,6 +19,10 @@ export const StyledProjectCard = styled.div`
   background: #eff1ec;
   padding: 1rem 0.5rem;
   border-radius: 25px;
+  h3 {
+    color: #333;
+  }
+
   img {
     height: 150px;
     padding-top: 1rem;
