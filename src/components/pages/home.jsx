@@ -3,11 +3,15 @@ import Showcase from "../layout/showcase";
 import { StyledContainer } from "../../shared/ui/components";
 import Skills from "../layout/skills";
 import Projects from "../layout/projects/projects";
-import { setMainPage } from "../../store/actions/projects-actions";
+import {
+  setMainPage,
+  clearProject
+} from "../../store/actions/projects-actions";
 import { connect } from "react-redux";
 
-const Home = ({ setMainPage }) => {
+const Home = ({ setMainPage, clearProject }) => {
   useEffect(() => {
+    clearProject();
     setMainPage(true);
     // eslint-disable-next-line
   }, []);
@@ -24,5 +28,5 @@ const Home = ({ setMainPage }) => {
 
 export default connect(
   null,
-  { setMainPage }
+  { setMainPage, clearProject }
 )(Home);

@@ -26,4 +26,4 @@ const App = () => {
 
 export default App;
 
-//TODO Add ClearProject function
+//TODO Remove Empty XML Tag

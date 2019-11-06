@@ -1,4 +1,4 @@
-import { GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
+import { CLEAR_PROJECT, GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
 import { config } from "../../firebase-config";
 import firebase from "firebase/app";
 import "firebase/firestore";
@@ -40,5 +40,11 @@ export const setMainPage = isMain => {
   return {
     type: SET_MAIN_PAGE,
     payload: isMain
+  };
+};
+
+export const clearProject = () => {
+  return {
+    type: CLEAR_PROJECT
   };
 };

@@ -1,4 +1,4 @@
-import { GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
+import { CLEAR_PROJECT, GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
 
 const initialState = {
   project: null,
@@ -23,6 +23,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         alert: action.payload
+      };
+    case CLEAR_PROJECT:
+      return {
+        ...state,
+        project: null
       };
 
     default:
