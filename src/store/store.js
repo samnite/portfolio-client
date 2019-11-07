@@ -1,25 +1,54 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk";
+import thunkMiddleware from "redux-thunk";
 import { connectRouter, routerMiddleware } from "connected-react-router";
 import projectReducer from "./reducers/projects-reducer";
+import { createBrowserHistory } from "history";
 
-const rootReducer = history =>
-  combineReducers({
-    router: connectRouter(history),
-    project: projectReducer
-  });
+let mStore;
 
-export default function configureStore(history) {
-  const initialState = {};
+const initialState = {};
+const history = createBrowserHistory();
 
-  const middleware = [thunk];
+const rootReducer = combineReducers({
+  router: connectRouter(history),
+  project: projectReducer
+});
 
-  return createStore(
-    rootReducer(history),
-    initialState,
+export const createNewStore = state =>
+  createStore(
+    rootReducer,
+    state,
     composeWithDevTools(
-      applyMiddleware(...middleware, routerMiddleware(history))
+      applyMiddleware(routerMiddleware(history), thunkMiddleware)
     )
   );
-}
+
+const initialStore = (state = initialState) => {
+  if (!mStore) {
+    mStore = createNewStore(state);
+  }
+
+  return mStore;
+};
+
+const store = initialStore();
+
+export default store;
+
+// export const createNewStore = state =>
+//   createStore(
+//     rootReducer,
+//     state,
+//     composeWithDevTools(applyMiddleware(routerMiddleware(history), thunkMiddleware, sagaMiddleware)),
+//   );
+//
+// const initialStore = (state = initialState) => {
+//   if (!mStore) {
+//     mStore = createNewStore(state);
+//
+//     sagaMiddleware.run(rootSaga);
+//   }
+//
+//   return mStore;
+// };
