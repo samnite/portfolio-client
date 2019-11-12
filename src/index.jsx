@@ -4,7 +4,6 @@ import App from "./app";
 import { Provider } from "react-redux";
 import "antd/dist/antd.css";
 import "./index.css";
-import { HashRouter } from "react-router-dom";
 import store from "./store/store";
 import { createBrowserHistory } from "history";
 import { ConnectedRouter } from "connected-react-router";
@@ -13,9 +12,9 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <ConnectedRouter history={history}>
       <App />
-    </HashRouter>
+    </ConnectedRouter>
   </Provider>,
   document.getElementById("root")
 );
