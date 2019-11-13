@@ -83,9 +83,9 @@ const Navbar = ({ project: { isMain } }) => {
               <ReactLink to="/">Home</ReactLink>
             )}
           </li>
-          {/*<li>*/}
-          {/*  <ReactLink to="/about">About</ReactLink>*/}
-          {/*</li>*/}
+          <li>
+            <ReactLink to="/about">About</ReactLink>
+          </li>
           <li>
             {isMain ? (
               <Link
