@@ -27,7 +27,7 @@ export const getProject = project_name => async dispatch => {
         // doc.data() will be undefined in this case
         dispatch({
           type: SET_ALERT,
-          payload: "No such document"
+          payload: "No such project"
         });
       }
     });

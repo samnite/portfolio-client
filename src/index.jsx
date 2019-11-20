@@ -18,5 +18,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-// </ConnectedRouter>
-// <ConnectedRouter history={history}>

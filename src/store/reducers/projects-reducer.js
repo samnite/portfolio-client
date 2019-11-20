@@ -17,7 +17,8 @@ export default (state = initialState, action) => {
     case SET_MAIN_PAGE:
       return {
         ...state,
-        isMain: action.payload
+        isMain: action.payload,
+        alert: null
       };
     case SET_ALERT:
       return {

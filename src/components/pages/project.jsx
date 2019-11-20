@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
 import { StyledCardLinks } from "../layout/projects/components";
 import ModalWindow from "../layout/modal";
+import { Redirect } from "react-router-dom";
 
 const StyledProject = styled.div`
   display: grid;
@@ -41,14 +42,24 @@ const StyledProject = styled.div`
   }
 `;
 
-const Project = ({ getProject, setMainPage, match, project: { project } }) => {
+const Project = ({
+  getProject,
+  setMainPage,
+  match,
+  project: { project, alert }
+}) => {
   useEffect(() => {
     setMainPage(false);
     getProject(match.params.project);
     // eslint-disable-next-line
   }, [match.params.project]);
 
-  if (project === null) return <StyledSpinner>Loading...</StyledSpinner>;
+  if (project === null) {
+    if (alert === "No such project") {
+      return <Redirect to="/" />;
+    }
+    return <StyledSpinner>Loading...</StyledSpinner>;
+  }
 
   return (
     <StyledContainer>
