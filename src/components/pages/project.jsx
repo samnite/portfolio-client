@@ -7,17 +7,18 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "react-redux";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
 import { StyledCardLinks } from "../layout/projects/components";
-import ModalWindow from "../layout/modal";
+import ModalWindow from "../util/modal";
 import { Redirect } from "react-router-dom";
 
 const StyledProject = styled.div`
   display: grid;
+  height: 90vh;
   color: #333;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin: 1rem 0;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   h2 {
     color: #333;
   }
@@ -37,7 +38,7 @@ const StyledProject = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     img {
-      height: 180px;
+      width: 180px;
     }
   }
 `;
@@ -76,9 +77,8 @@ const Project = ({
             <li>
               <ul>
                 <strong>Techs:</strong>
-                {project.techs.map(tech => (
-                  <li key={tech}>{tech}</li>
-                ))}
+                {project.techs &&
+                  project.techs.map(tech => <li key={tech}>{tech}</li>)}
               </ul>
             </li>
           </ul>

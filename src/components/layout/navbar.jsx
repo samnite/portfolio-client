@@ -4,6 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Link as ReactLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { connect } from "react-redux";
 
 const StyledNavbar = styled.nav`
@@ -97,7 +98,9 @@ const Navbar = ({ project: { isMain } }) => {
               >
                 Projects
               </Link>
-            ) : null}
+            ) : (
+              <HashLink to="/#Projects">Projects</HashLink>
+            )}
           </li>
           <li>
             <a

@@ -6,7 +6,7 @@ import Footer from "./components/layout/footer";
 import About from "./components/pages/about";
 import Project from "./components/pages/project";
 import NotFound from "./components/pages/not-found";
-import Alert from "./components/layout/alert";
+import Alert from "./components/util/alert";
 
 const App = () => {
   return (

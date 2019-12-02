@@ -14,7 +14,7 @@ const Alert = ({ project: { alert } }) => {
     message.error(alert);
   };
 
-  return <div></div>;
+  return <div />;
 };
 
 const mapStateToProps = state => ({

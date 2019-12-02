@@ -35,20 +35,3 @@ const initialStore = (state = initialState) => {
 const store = initialStore();
 
 export default store;
-
-// export const createNewStore = state =>
-//   createStore(
-//     rootReducer,
-//     state,
-//     composeWithDevTools(applyMiddleware(routerMiddleware(history), thunkMiddleware, sagaMiddleware)),
-//   );
-//
-// const initialStore = (state = initialState) => {
-//   if (!mStore) {
-//     mStore = createNewStore(state);
-//
-//     sagaMiddleware.run(rootSaga);
-//   }
-//
-//   return mStore;
-// };

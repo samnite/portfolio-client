@@ -1,189 +1,83 @@
 import React, { Fragment } from "react";
 import { StyledLHead } from "../../../shared/ui/components";
-import { Link as ReactLink } from "react-router-dom";
-
 import blackjack from "../../../img/projects/blackjack.png";
 import burger from "../../../img/projects/burger-builder.png";
 import contactKeeper from "../../../img/projects/contact-keeper.png";
 import githubFinder from "../../../img/projects/github-finder.png";
 import itLogger from "../../../img/projects/it-logger.png";
 import profikom from "../../../img/projects/profikom.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDesktop, faIdCard } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  StyledCardLinks,
-  StyledProjectCard,
-  StyledProjects
-} from "./components";
+import alexBlog from "../../../img/projects/alex-blog.png";
+import forkify from "../../../img/projects/forkify.png";
+import { StyledProjects } from "./components";
+import ProjectItem from "./project-item";
 
 const Projects = () => {
   return (
     <Fragment>
       <StyledLHead id="Projects">Projects</StyledLHead>
       <StyledProjects>
-        <StyledProjectCard>
-          <h3>Contact Keeper</h3>
-          <img src={contactKeeper} alt="Contact Keeper" id="left" />
-          <StyledCardLinks>
-            <ReactLink
-              to="/projects/contact-keeper"
-              title="See More..."
-              id="more"
-            >
-              <FontAwesomeIcon icon={faIdCard} />
-            </ReactLink>
-            <a
-              href="https://vast-journey-34926.herokuapp.com/"
-              title="See Demo ..."
-              id="demo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDesktop} />
-            </a>
-            <a
-              href="https://github.com/samnite/Contact-Keeper-TS"
-              title="See Project on GitHub"
-              id="src"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </StyledCardLinks>
-        </StyledProjectCard>
-        <StyledProjectCard>
-          <h3>GitHub Finder</h3>
-          <img src={githubFinder} alt="GitHub Finder" id="top" />
-          <StyledCardLinks>
-            <ReactLink
-              to="/projects/github-finder"
-              title="See More..."
-              id="more"
-            >
-              <FontAwesomeIcon icon={faIdCard} />
-            </ReactLink>
-            <a
-              href="https://github-finder-react-ts.netlify.com/"
-              title="See Demo ..."
-              id="demo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDesktop} />
-            </a>
-            <a
-              href="https://github.com/samnite/ReactJS-GitHub-Finder-TypeScript"
-              title="See Project on GitHub"
-              id="src"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </StyledCardLinks>
-        </StyledProjectCard>
-        <StyledProjectCard>
-          <h3>Burger Builder</h3>
-          <img src={burger} alt="Burger Builder" id="right" />
-          <StyledCardLinks>
-            <ReactLink
-              to="/projects/burger-builder"
-              title="See More..."
-              id="more"
-            >
-              <FontAwesomeIcon icon={faIdCard} />
-            </ReactLink>
-            <a
-              href="https://burger.profikom.pp.ua/"
-              title="See Demo ..."
-              id="demo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDesktop} />
-            </a>
-            <a
-              href="https://github.com/samnite/Burger-Builder-React.JS"
-              title="See Project on GitHub"
-              id="src"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </StyledCardLinks>
-        </StyledProjectCard>
-        <StyledProjectCard>
-          <h3>BlackJack Game</h3>
-          <img src={blackjack} alt="BlackJack" id="left" />
-          <StyledCardLinks>
-            <ReactLink
-              to="/projects/blackjack-game"
-              title="See More..."
-              id="more"
-            >
-              <FontAwesomeIcon icon={faIdCard} />
-            </ReactLink>
-            <a
-              href="https://gifted-pike-a9b5e0.netlify.com/"
-              title="See Demo ..."
-              id="demo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDesktop} />
-            </a>
-            <a
-              href="https://github.com/samnite/BlackJack-React.js-"
-              title="See Project on GitHub"
-              id="src"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </StyledCardLinks>
-        </StyledProjectCard>
-        <StyledProjectCard>
-          <h3>It Logger</h3>
-          {/*  This image resized manually in StyledProjectCard nth-child(5) */}
-          <img src={itLogger} alt="IT Logger" id="top" />
-          <StyledCardLinks>
-            <ReactLink to="/projects/it-logger" title="See More..." id="more">
-              <FontAwesomeIcon icon={faIdCard} />
-            </ReactLink>
-
-            <a
-              href="https://github.com/samnite/IT-Logger-React-Redux"
-              title="See Project on GitHub"
-              id="src"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </StyledCardLinks>
-        </StyledProjectCard>
-        <StyledProjectCard>
-          <h3>Profikom site</h3>
-          <img src={profikom} alt="Profikom" id="right" />
-          <StyledCardLinks>
-            <ReactLink to="/projects/profikom" title="See More..." id="more">
-              <FontAwesomeIcon icon={faIdCard} />
-            </ReactLink>
-            <a
-              href="https://dev-profikom-portfolio.pantheonsite.io/"
-              title="See Demo ..."
-              id="demo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDesktop} />
-            </a>
-          </StyledCardLinks>
-        </StyledProjectCard>
+        <ProjectItem
+          title="Alex Blog"
+          img={alexBlog}
+          id="left"
+          link="/projects/alex-blog"
+          webLink="https://blog.agrib.pp.ua/"
+          gitLink="https://github.com/samnite/alex-blog"
+        />
+        <ProjectItem
+          title="Contact Keeper"
+          img={contactKeeper}
+          id="top"
+          link="/projects/contact-keeper"
+          webLink="https://vast-journey-34926.herokuapp.com/"
+          gitLink="https://github.com/samnite/Contact-Keeper-TS"
+        />
+        <ProjectItem
+          title="GitHub Finder"
+          img={githubFinder}
+          id="right"
+          link="/projects/github-finder"
+          webLink="https://github-finder-react-ts.netlify.com/"
+          gitLink="https://github.com/samnite/ReactJS-GitHub-Finder-TypeScript"
+        />
+        <ProjectItem
+          title="Burger Builder"
+          img={burger}
+          id="left"
+          link="/projects/burger-builder"
+          webLink="https://burger.profikom.pp.ua/"
+          gitLink="https://github.com/samnite/Burger-Builder-React.JS"
+        />
+        <ProjectItem
+          title="BlackJack Game"
+          img={blackjack}
+          id="top"
+          link="/projects/blackjack-game"
+          webLink="https://gifted-pike-a9b5e0.netlify.com/"
+          gitLink="https://github.com/samnite/BlackJack-React.js-"
+        />
+        <ProjectItem
+          title="It Logger"
+          img={itLogger}
+          id="right"
+          link="/projects/it-logger"
+          gitLink="https://github.com/samnite/IT-Logger-React-Redux"
+        />
+        <ProjectItem
+          title="Profikom site"
+          img={profikom}
+          id="left"
+          link="/projects/profikom"
+          webLink="https://dev-profikom-portfolio.pantheonsite.io/"
+        />
+        <ProjectItem
+          title="Forkify - find recipes"
+          img={forkify}
+          id="top"
+          link="/projects/forkify"
+          webLink="https://github.com/samnite/Forkify-recipes-search-controller"
+          gitLink="https://samnite.github.io/Forkify-recipes-search-controller/"
+        />
       </StyledProjects>
     </Fragment>
   );

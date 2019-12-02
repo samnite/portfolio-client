@@ -45,7 +45,7 @@ export const StyledProjectCard = styled.div`
     }
   }
   @media (max-width: 768px) {
-    &:nth-child(5) {
+    &:nth-child(6) {
       img {
         height: 120px;
         width: 200px;
