@@ -28,15 +28,9 @@ const StyledProject = styled.div`
     text-align: left;
   }
 
-  img {
-    //height: 250px;
-  }
-  div:last-child {
-    //border-left: 1px dotted #333;
-    //padding-top: 3rem;
-  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    height: 100%;
     img {
       width: 180px;
     }
