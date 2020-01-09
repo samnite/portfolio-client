@@ -21,6 +21,9 @@ const StyledAbout = styled.div`
     border-radius: 150px;
     margin: auto auto 1rem;
   }
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const About = ({ setMainPage }) => {
