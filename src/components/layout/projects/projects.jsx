@@ -8,6 +8,7 @@ import itLogger from "../../../img/projects/it-logger.png";
 import profikom from "../../../img/projects/profikom.png";
 import alexBlog from "../../../img/projects/alex-blog.png";
 import forkify from "../../../img/projects/forkify.png";
+import autods from "../../../img/projects/autods.png";
 import { StyledProjects } from "./components";
 import ProjectItem from "./project-item";
 
@@ -25,12 +26,12 @@ const Projects = () => {
           gitLink="https://github.com/samnite/alex-blog"
         />
         <ProjectItem
-          title="Contact Keeper"
-          img={contactKeeper}
+          title="AutoDS task"
+          img={autods}
           id="top"
-          link="/projects/contact-keeper"
-          webLink="https://vast-journey-34926.herokuapp.com/"
-          gitLink="https://github.com/samnite/Contact-Keeper-TS"
+          link="/projects/autods"
+          webLink="https://stupefied-williams-a3117e.netlify.com/"
+          gitLink="https://github.com/samnite/autods-task"
         />
         <ProjectItem
           title="GitHub Finder"
@@ -77,6 +78,14 @@ const Projects = () => {
           link="/projects/forkify"
           webLink="https://github.com/samnite/Forkify-recipes-search-controller"
           gitLink="https://samnite.github.io/Forkify-recipes-search-controller/"
+        />
+        <ProjectItem
+          title="Contact Keeper"
+          img={contactKeeper}
+          id="right"
+          link="/projects/contact-keeper"
+          webLink="https://vast-journey-34926.herokuapp.com/"
+          gitLink="https://github.com/samnite/Contact-Keeper-TS"
         />
       </StyledProjects>
     </Fragment>
