@@ -53,11 +53,10 @@ const StyledNavbar = styled.nav`
   }
 `;
 
-const Navbar = ({ project: { isMain } }) => {
+const Navbar = ({ data: { isMain } }) => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-  scrollToTop(); // Not sure
 
   return (
     <Fragment>
@@ -118,7 +117,7 @@ const Navbar = ({ project: { isMain } }) => {
 };
 
 const mapStateToProps = state => ({
-  project: state.project
+  data: state.data
 });
 
 export default connect(mapStateToProps)(Navbar);

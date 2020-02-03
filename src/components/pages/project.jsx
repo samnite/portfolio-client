@@ -41,7 +41,7 @@ const Project = ({
   getProject,
   setMainPage,
   match,
-  project: { project, alert }
+  data: { project, alert }
 }) => {
   useEffect(() => {
     setMainPage(false);
@@ -107,7 +107,7 @@ const Project = ({
 };
 
 const mapStateToProps = state => ({
-  project: state.project
+  data: state.data
 });
 
 export default connect(

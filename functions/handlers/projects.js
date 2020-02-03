@@ -8,6 +8,7 @@ exports.getAllProjects = (req, res) => {
       const projects = [];
       data.forEach(doc => {
         projects.push({
+          link: doc.id,
           ...doc.data()
         });
       });

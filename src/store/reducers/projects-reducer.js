@@ -1,8 +1,15 @@
-import { CLEAR_PROJECT, GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
+import {
+  CLEAR_PROJECT,
+  GET_PROJECT,
+  SET_ALERT,
+  SET_MAIN_PAGE,
+  GET_ALL_PROJECTS
+} from "../types";
 import { createReducer } from "../redux";
 
 const initialState = {
   project: null,
+  projects: null,
   alert: null,
   isMain: true
 };
@@ -12,6 +19,13 @@ export default createReducer(initialState, {
     return {
       ...state,
       project: payload,
+      alert: null
+    };
+  },
+  [GET_ALL_PROJECTS]: (state, { payload }) => {
+    return {
+      ...state,
+      projects: payload,
       alert: null
     };
   },

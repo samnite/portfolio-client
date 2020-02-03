@@ -1,4 +1,10 @@
-import { CLEAR_PROJECT, GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
+import {
+  CLEAR_PROJECT,
+  GET_PROJECT,
+  SET_ALERT,
+  SET_MAIN_PAGE,
+  GET_ALL_PROJECTS
+} from "../types";
 import axios from "axios";
 
 axios.defaults.baseURL =
@@ -11,7 +17,7 @@ export const setAlert = alert => {
   };
 };
 
-export const getProject = project_name => async dispatch => {
+export const getProject = project_name => dispatch => {
   axios
     .get(`/project/${project_name}`)
     .then(res => {
@@ -24,6 +30,23 @@ export const getProject = project_name => async dispatch => {
       dispatch({
         type: SET_ALERT,
         payload: response.data.error
+      });
+    });
+};
+
+export const getAllProjects = () => dispatch => {
+  axios
+    .get("/projects")
+    .then(res => {
+      dispatch({
+        type: GET_ALL_PROJECTS,
+        payload: res.data
+      });
+    })
+    .catch(err => {
+      dispatch({
+        type: SET_ALERT,
+        payload: err.message
       });
     });
 };

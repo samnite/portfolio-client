@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { message } from "antd";
 import { connect } from "react-redux";
 
-const Alert = ({ project: { alert } }) => {
+const Alert = ({ data: { alert } }) => {
   useEffect(() => {
     if (alert) {
       error(alert);
@@ -18,7 +18,7 @@ const Alert = ({ project: { alert } }) => {
 };
 
 const mapStateToProps = state => ({
-  project: state.project
+  data: state.data
 });
 
 export default connect(mapStateToProps)(Alert);
