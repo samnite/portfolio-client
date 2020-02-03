@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSkype,
   faTelegram,
-  faFacebook
+  faFacebook,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -99,6 +100,18 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               Alex Gribenchenko
+            </a>
+          </p>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faLinkedin} size="2x" color="#93cb52" />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/alex-gribenchenko/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Link Me
             </a>
           </p>
         </div>

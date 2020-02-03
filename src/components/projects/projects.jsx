@@ -1,14 +1,14 @@
 import React, { Fragment } from "react";
-import { StyledLHead } from "../../../shared/ui/components";
-import blackjack from "../../../img/projects/blackjack.png";
-import burger from "../../../img/projects/burger-builder.png";
-import contactKeeper from "../../../img/projects/contact-keeper.png";
-import githubFinder from "../../../img/projects/github-finder.png";
-import itLogger from "../../../img/projects/it-logger.png";
-import profikom from "../../../img/projects/profikom.png";
-import alexBlog from "../../../img/projects/alex-blog.png";
-import forkify from "../../../img/projects/forkify.png";
-import autods from "../../../img/projects/autods.png";
+import { StyledLHead } from "../../shared/ui/components";
+import portfolioClient from "../../img/projects/portfolio.png";
+import contactKeeper from "../../img/projects/contact-keeper.png";
+import githubFinder from "../../img/projects/github-finder.png";
+import itLogger from "../../img/projects/it-logger.png";
+import profikom from "../../img/projects/profikom.png";
+import alexBlog from "../../img/projects/alex-blog.png";
+import forkify from "../../img/projects/forkify.png";
+import autods from "../../img/projects/autods.png";
+import portfolioWp from "../../img/projects/portfolio-wp.png";
 import { StyledProjects } from "./components";
 import ProjectItem from "./project-item";
 
@@ -42,20 +42,20 @@ const Projects = () => {
           gitLink="https://github.com/samnite/ReactJS-GitHub-Finder-TypeScript"
         />
         <ProjectItem
-          title="Burger Builder"
-          img={burger}
+          title="Portfolio-WP"
+          img={portfolioWp}
           id="left"
-          link="/projects/burger-builder"
-          webLink="https://burger.profikom.pp.ua/"
-          gitLink="https://github.com/samnite/Burger-Builder-React.JS"
+          link="/projects/portfolio-wp"
+          webLink="http://dev-john-doe-portfolio-theme.pantheonsite.io/"
+          gitLink="https://github.com/samnite/css-html/tree/master/Portfolio"
         />
         <ProjectItem
-          title="BlackJack Game"
-          img={blackjack}
+          title="Portfolio (React)"
+          img={portfolioClient}
           id="top"
-          link="/projects/blackjack-game"
-          webLink="https://gifted-pike-a9b5e0.netlify.com/"
-          gitLink="https://github.com/samnite/BlackJack-React.js-"
+          link="/projects/portfolio-client"
+          webLink="https://agrib.pp.ua/"
+          gitLink="https://github.com/samnite/portfolio-client"
         />
         <ProjectItem
           title="It Logger"

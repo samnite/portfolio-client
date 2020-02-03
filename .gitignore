@@ -26,3 +26,4 @@ yarn.lock
 !/firebase.json
 !/.firebaserc
 !/.firebase/
+/.firebase/

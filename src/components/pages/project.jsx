@@ -6,7 +6,7 @@ import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "react-redux";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
-import { StyledCardLinks } from "../layout/projects/components";
+import { StyledCardLinks } from "../projects/components";
 import ModalWindow from "../util/modal";
 import { Redirect } from "react-router-dom";
 

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "components/layout/navbar";
 import Home from "./components/pages/home";
-import Footer from "./components/layout/footer";
+import Footer from "./components/layout/footer/footer";
 import About from "./components/pages/about";
 import Project from "./components/pages/project";
 import NotFound from "./components/pages/not-found";
