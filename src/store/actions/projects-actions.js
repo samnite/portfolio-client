@@ -1,13 +1,10 @@
 import { CLEAR_PROJECT, GET_PROJECT, SET_ALERT, SET_MAIN_PAGE } from "../types";
-import { config } from "../../firebase-config";
-import firebase from "firebase/app";
-import "firebase/firestore";
+import axios from "axios";
 
-firebase.initializeApp(config);
-const db = firebase.firestore();
+axios.defaults.baseURL =
+  "https://europe-west1-portfolio-client-2e35a.cloudfunctions.net/api";
 
 export const setAlert = alert => {
-  console.log("work in setAlert");
   return {
     type: SET_ALERT,
     payload: alert
@@ -15,25 +12,20 @@ export const setAlert = alert => {
 };
 
 export const getProject = project_name => async dispatch => {
-  const docRef = db.collection("projects").doc(project_name);
-  try {
-    await docRef.get().then(doc => {
-      if (doc.exists) {
-        dispatch({
-          type: GET_PROJECT,
-          payload: doc.data()
-        });
-      } else {
-        // doc.data() will be undefined in this case
-        dispatch({
-          type: SET_ALERT,
-          payload: "No such project"
-        });
-      }
+  axios
+    .get(`/project/${project_name}`)
+    .then(res => {
+      dispatch({
+        type: GET_PROJECT,
+        payload: res.data
+      });
+    })
+    .catch(err => {
+      dispatch({
+        type: SET_ALERT,
+        payload: err.message
+      });
     });
-  } catch (err) {
-    console.log("Error getting document:", err);
-  }
 };
 
 export const setMainPage = isMain => {

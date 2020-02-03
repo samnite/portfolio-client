@@ -50,7 +50,7 @@ const Project = ({
   }, [match.params.project]);
 
   if (project === null) {
-    if (alert === "No such project") {
+    if (alert) {
       return <Redirect to="/" />;
     }
     return <StyledSpinner>Loading...</StyledSpinner>;
