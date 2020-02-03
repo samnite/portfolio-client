@@ -20,10 +20,10 @@ export const getProject = project_name => async dispatch => {
         payload: res.data
       });
     })
-    .catch(err => {
+    .catch(({ response }) => {
       dispatch({
         type: SET_ALERT,
-        payload: err.message
+        payload: response.data.error
       });
     });
 };
