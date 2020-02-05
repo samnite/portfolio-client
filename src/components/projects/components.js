@@ -51,6 +51,12 @@ export const StyledProjectCard = styled.div`
         width: 200px;
       }
     }
+    &:nth-child(7) {
+      img {
+        height: 120px;
+        width: 200px;
+      }
+    }
     img {
       padding: 0.5rem;
     }

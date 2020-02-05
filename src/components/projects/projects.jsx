@@ -19,19 +19,21 @@ const Projects = ({ getAllProjects, data: { projects } }) => {
     <Fragment>
       <StyledLHead id="Projects">Projects</StyledLHead>
       <StyledProjects>
-        {projects.map(({ name, img_url, live_url, github_url, id, link }) => {
-          return (
-            <ProjectItem
-              title={name}
-              img={img_url}
-              key={id}
-              webLink={live_url}
-              gitLink={github_url}
-              link={"/projects/" + link}
-              id="top"
-            />
-          );
-        })}
+        {projects.map(
+          ({ name, img_url, live_url, github_url, id, link }, idx) => {
+            return (
+              <ProjectItem
+                title={name}
+                img={img_url}
+                key={id}
+                webLink={live_url}
+                gitLink={github_url}
+                link={"/projects/" + link}
+                id={idx % 3 === 0 ? "left" : idx % 3 === 1 ? "top" : "right"}
+              />
+            );
+          }
+        )}
       </StyledProjects>
     </Fragment>
   );
