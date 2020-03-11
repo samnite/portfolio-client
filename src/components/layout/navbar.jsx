@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Link as ReactLink } from "react-router-dom";
+import { Link as ReactLink, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { connect } from "react-redux";
 
@@ -12,6 +12,7 @@ const StyledNavbar = styled.nav`
   z-index: 1;
   top: 0;
   left: 0;
+  margin: 0;
   color: #fff;
   background: var(--dark-color);
   display: flex;
@@ -20,7 +21,9 @@ const StyledNavbar = styled.nav`
   padding: 1rem;
   text-align: center;
   align-items: center;
-
+  a {
+    color: #fff;
+  }
   span {
     color: var(--primary-hover-color) !important;
   }
@@ -45,6 +48,9 @@ const StyledNavbar = styled.nav`
       }
     }
   }
+  .active-nav {
+    background: var(--primary-color);
+  }
   @media (max-width: 768px) {
     justify-content: center;
     ul {
@@ -62,15 +68,16 @@ const Navbar = ({ data: { isMain } }) => {
     <Fragment>
       <StyledNavbar>
         <h1>
-          <span>Alex</span>Gribenchenko
+          <ReactLink to="/">
+            <span>Alex</span>Gribenchenko
+          </ReactLink>
         </h1>
-
         <ul>
           <li>
             {isMain ? (
               <Link
-                to=""
-                activeClass="active"
+                to="/"
+                activeClass="active-nav"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -84,7 +91,9 @@ const Navbar = ({ data: { isMain } }) => {
             )}
           </li>
           <li>
-            <ReactLink to="/about">About</ReactLink>
+            <NavLink to="/about" activeClassName="active-nav">
+              About
+            </NavLink>
           </li>
           <li>
             {isMain ? (

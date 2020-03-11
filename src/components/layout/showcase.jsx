@@ -21,6 +21,9 @@ const StyledShowCaseContent = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  h1 {
+    color: #fff;
+  }
   span {
     color: var(--primary-hover-color);
   }

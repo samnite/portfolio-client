@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { setMainPage } from "../../store/actions/projects-actions";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import avatarImg from "../../img/avatar/avatar.png";
+import avatarImg from "../../img/avatar/avatar.jpg";
 
 const StyledAbout = styled.div`
   max-width: 800px;

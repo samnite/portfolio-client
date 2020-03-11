@@ -20,11 +20,11 @@ const Projects = ({ getAllProjects, data: { projects } }) => {
       <StyledLHead id="Projects">Projects</StyledLHead>
       <StyledProjects>
         {projects.map(
-          ({ name, img_url, live_url, github_url, id, link }, idx) => {
+          ({ name, thumbnail, live_url, github_url, id, link }, idx) => {
             return (
               <ProjectItem
                 title={name}
-                img={img_url}
+                img={thumbnail}
                 key={id}
                 webLink={live_url}
                 gitLink={github_url}
