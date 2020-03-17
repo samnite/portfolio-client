@@ -76,7 +76,7 @@ const Navbar = ({ data: { isMain } }) => {
           <li>
             {isMain ? (
               <Link
-                to="/"
+                to=""
                 activeClass="active-nav"
                 spy={true}
                 smooth={true}
@@ -130,3 +130,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(Navbar);
+
+//TODO Fix scroll-to-top (main page have no active class)

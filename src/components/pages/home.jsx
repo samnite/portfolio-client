@@ -8,6 +8,7 @@ import {
   clearProject
 } from "../../store/actions/projects-actions";
 import { connect } from "react-redux";
+import ScrollTop from "../layout/scroll-top";
 
 const Home = ({ setMainPage, clearProject }) => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const Home = ({ setMainPage, clearProject }) => {
         <Skills />
         <Projects />
       </StyledContainer>
+      <ScrollTop />
     </Fragment>
   );
 };

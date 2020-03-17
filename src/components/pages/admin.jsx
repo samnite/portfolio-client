@@ -26,7 +26,9 @@ const StyledForm = styled(Form)`
 const Admin = ({ setMainPage }) => {
   useEffect(() => {
     setMainPage(false);
+    // eslint-disable-next-line
   }, []);
+
   const onFinish = values => {
     console.log("Received values of form: ", values);
   };
