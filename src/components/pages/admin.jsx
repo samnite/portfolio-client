@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import { connect } from "react-redux";
@@ -10,10 +10,6 @@ const StyledForm = styled(Form)`
   margin: 20px auto;
   svg {
     color: rgba(0, 0, 0, 0.25);
-  }
-  .login-form-forgot {
-    float: right;
-    color: var(--primary-hover-color);
   }
   .login-form-button {
     width: 100%;
@@ -60,20 +56,6 @@ const Admin = ({ setMainPage }) => {
         />
       </Form.Item>
       <Form.Item>
-        <Form.Item name="remember" valuePropName="checked" noStyle>
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-
-        <a
-          className="login-form-forgot"
-          rel="noopener noreferrer"
-          href="https://agrib.pp.ua/"
-        >
-          Forgot password
-        </a>
-      </Form.Item>
-
-      <Form.Item>
         <Button type="primary" htmlType="submit" className="login-form-button">
           Log in
         </Button>
@@ -86,7 +68,4 @@ const Admin = ({ setMainPage }) => {
   );
 };
 
-export default connect(
-  null,
-  { setMainPage }
-)(Admin);
+export default connect(null, { setMainPage })(Admin);
