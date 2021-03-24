@@ -21,19 +21,24 @@ const StyledShowCaseContent = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
+
   h1 {
     color: #fff;
   }
+
   span {
     color: var(--primary-hover-color);
   }
+
   div {
     width: 50%;
     padding: 2rem 0;
+
     p {
       font-size: 1.2rem;
     }
   }
+
   @media (max-width: 768px) {
     div {
       width: 100%;
@@ -41,25 +46,22 @@ const StyledShowCaseContent = styled.div`
   }
 `;
 
-const Showcase = () => {
-  return (
-    <Parallax bgImage={background} strength={600}>
-      <StyledShowCase id="Home">
-        <StyledShowCaseContent>
-          <h1>
-            Hi, I'm <span>Alex</span> Gribenchenko
-          </h1>
-          <div>
-            <p>
-              I'm Ukraine-based freelancer. I work for clients all over the
-              world. I specialize in front-end development, and I love what I
-              do.
-            </p>
-          </div>
-        </StyledShowCaseContent>
-      </StyledShowCase>
-    </Parallax>
-  );
-};
+const Showcase = () => (
+  <Parallax bgImage={background} strength={600}>
+    <StyledShowCase id="Home">
+      <StyledShowCaseContent>
+        <h1>
+          Hi, I&rsquo;m <span>Alex</span> Gribenchenko
+        </h1>
+        <div>
+          <p>
+            I&rsquo;m Ukraine-based freelancer. I work for clients all over the
+            world. I specialize in front-end development, and I love what I do.
+          </p>
+        </div>
+      </StyledShowCaseContent>
+    </StyledShowCase>
+  </Parallax>
+);
 
 export default Showcase;

@@ -4,8 +4,8 @@ const cors = require("cors");
 
 app.use(cors());
 
-const { getAllProjects, getProject } = require("./handlers/projects");
-const { login } = require("./handlers/user");
+const {getAllProjects, getProject} = require("./handlers/projects");
+const {login} = require("./handlers/user");
 
 app.get("/projects", getAllProjects);
 app.get("/project/:projectId", getProject);

@@ -1,14 +1,14 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import { StyledLHead, StyledSpinner } from "../../shared/ui/components";
 import { StyledProjects } from "./components";
 import ProjectItem from "./project-item";
-import { connect } from "react-redux";
 import { getAllProjects } from "../../store/actions/projects-actions";
 
+// eslint-disable-next-line no-shadow
 const Projects = ({ getAllProjects, data: { projects } }) => {
   useEffect(() => {
     getAllProjects();
-    // eslint-disable-next-line
   }, []);
 
   if (projects === null) {
@@ -16,34 +16,29 @@ const Projects = ({ getAllProjects, data: { projects } }) => {
   }
 
   return (
-    <Fragment>
+    <>
       <StyledLHead id="Projects">Projects</StyledLHead>
       <StyledProjects>
         {projects.map(
-          ({ name, thumbnail, live_url, github_url, id, link }, idx) => {
-            return (
-              <ProjectItem
-                title={name}
-                img={thumbnail}
-                key={id}
-                webLink={live_url}
-                gitLink={github_url}
-                link={"/projects/" + link}
-                id={idx % 3 === 0 ? "left" : idx % 3 === 1 ? "top" : "right"}
-              />
-            );
-          }
+          ({ name, thumbnail, live_url, github_url, id, link }, idx) => (
+            <ProjectItem
+              title={name}
+              img={thumbnail}
+              key={id}
+              webLink={live_url}
+              gitLink={github_url}
+              link={`/projects/${link}`}
+              id={idx % 3 === 0 ? "left" : idx % 3 === 1 ? "top" : "right"}
+            />
+          )
         )}
       </StyledProjects>
-    </Fragment>
+    </>
   );
 };
 
-const mapStateToProps = state => ({
-  data: state.data
+const mapStateToProps = (state) => ({
+  data: state.data,
 });
 
-export default connect(
-  mapStateToProps,
-  { getAllProjects }
-)(Projects);
+export default connect(mapStateToProps, { getAllProjects })(Projects);

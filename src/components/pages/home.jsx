@@ -1,34 +1,31 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import Showcase from "../layout/showcase";
 import { StyledContainer } from "../../shared/ui/components";
 import Skills from "../layout/skills";
 import Projects from "../projects/projects";
 import {
+  clearProject,
   setMainPage,
-  clearProject
 } from "../../store/actions/projects-actions";
-import { connect } from "react-redux";
 import ScrollTop from "../layout/scroll-top";
 
+// eslint-disable-next-line no-shadow
 const Home = ({ setMainPage, clearProject }) => {
   useEffect(() => {
     clearProject();
     setMainPage(true);
-    // eslint-disable-next-line
   }, []);
   return (
-    <Fragment>
+    <>
       <Showcase />
       <StyledContainer>
         <Skills />
         <Projects />
       </StyledContainer>
       <ScrollTop />
-    </Fragment>
+    </>
   );
 };
 
-export default connect(
-  null,
-  { setMainPage, clearProject }
-)(Home);
+export default connect(null, { setMainPage, clearProject })(Home);

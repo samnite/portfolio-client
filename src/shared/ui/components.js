@@ -10,6 +10,7 @@ export const StyledPrimaryButton = styled.a`
   border: none;
   border-radius: 5px;
   transition: all 0.5s;
+
   &:hover {
     background: var(--primary-hover-color);
   }

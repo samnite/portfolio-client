@@ -8,21 +8,26 @@ export const StyledFooter = styled.footer`
   padding: 1rem 1rem 0 1rem;
   background: #333;
   color: #ccc;
+
   div {
     margin: 0 4rem;
   }
+
   p {
     margin-top: 0.5rem;
   }
+
   a:last-child {
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
     color: #ccc;
     transition: all 1s;
+
     &:hover {
       background: var(--primary-color);
     }
   }
+
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;

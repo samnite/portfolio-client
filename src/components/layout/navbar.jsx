@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll, Link } from "react-scroll";
 import { Link as ReactLink, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { connect } from "react-redux";
@@ -21,9 +21,11 @@ const StyledNavbar = styled.nav`
   padding: 1rem;
   text-align: center;
   align-items: center;
+
   a {
     color: #fff;
   }
+
   span {
     color: var(--primary-hover-color) !important;
   }
@@ -31,6 +33,7 @@ const StyledNavbar = styled.nav`
   ul {
     display: flex;
     list-style: none;
+
     li {
       a {
         cursor: pointer;
@@ -48,9 +51,11 @@ const StyledNavbar = styled.nav`
       }
     }
   }
+
   .active-nav {
     background: var(--primary-color);
   }
+
   @media (max-width: 768px) {
     justify-content: center;
     ul {
@@ -65,7 +70,7 @@ const Navbar = ({ data: { isMain } }) => {
   };
 
   return (
-    <Fragment>
+    <>
       <StyledNavbar>
         <h1>
           <ReactLink to="/">
@@ -78,8 +83,8 @@ const Navbar = ({ data: { isMain } }) => {
               <Link
                 to=""
                 activeClass="active-nav"
-                spy={true}
-                smooth={true}
+                spy
+                smooth
                 offset={-70}
                 duration={500}
                 onClick={scrollToTop}
@@ -97,13 +102,7 @@ const Navbar = ({ data: { isMain } }) => {
           </li>
           <li>
             {isMain ? (
-              <Link
-                to="Projects"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
+              <Link to="Projects" spy smooth offset={-70} duration={500}>
                 Projects
               </Link>
             ) : (
@@ -121,14 +120,14 @@ const Navbar = ({ data: { isMain } }) => {
           </li>
         </ul>
       </StyledNavbar>
-    </Fragment>
+    </>
   );
 };
 
-const mapStateToProps = state => ({
-  data: state.data
+const mapStateToProps = (state) => ({
+  data: state.data,
 });
 
 export default connect(mapStateToProps)(Navbar);
 
-//TODO Fix scroll-to-top (main page have no active class)
+// TODO Fix scroll-to-top (main page have no active class)

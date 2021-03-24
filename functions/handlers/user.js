@@ -1,5 +1,5 @@
 const firebase = require("firebase");
-const { validateLoginData } = require("../util/validators");
+const {validateLoginData} = require("../util/validators");
 
 // Log In User
 exports.login = (req, res) => {
@@ -8,7 +8,7 @@ exports.login = (req, res) => {
     password: req.body.password
   };
 
-  const { valid, errors } = validateLoginData(user);
+  const {valid, errors} = validateLoginData(user);
 
   if (!valid) return res.status(400).json(errors);
 
@@ -19,7 +19,7 @@ exports.login = (req, res) => {
       return data.user.getIdToken();
     })
     .then(token => {
-      return res.json({ token });
+      return res.json({token});
     })
     .catch(err => {
       // auth/wrong-password
@@ -27,6 +27,6 @@ exports.login = (req, res) => {
       console.error(err.code);
       return res
         .status(403)
-        .json({ general: "Wrong Credentials. Please try again" });
+        .json({general: "Wrong Credentials. Please try again"});
     });
 };

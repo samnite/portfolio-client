@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Form, Input, Button } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Button, Form, Input } from "antd";
+import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { setMainPage } from "../../store/actions/projects-actions";
@@ -8,9 +8,11 @@ import { setMainPage } from "../../store/actions/projects-actions";
 const StyledForm = styled(Form)`
   max-width: 300px;
   margin: 20px auto;
+
   svg {
     color: rgba(0, 0, 0, 0.25);
   }
+
   .login-form-button {
     width: 100%;
     background-color: var(--primary-color);
@@ -19,15 +21,13 @@ const StyledForm = styled(Form)`
   }
 `;
 
+// eslint-disable-next-line no-shadow
 const Admin = ({ setMainPage }) => {
   useEffect(() => {
     setMainPage(false);
-    // eslint-disable-next-line
   }, []);
 
-  const onFinish = values => {
-    console.log("Received values of form: ", values);
-  };
+  const onFinish = (values) => values;
 
   return (
     <StyledForm

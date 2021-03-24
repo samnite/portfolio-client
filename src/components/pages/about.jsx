@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { setMainPage } from "../../store/actions/projects-actions";
 import { connect } from "react-redux";
 import styled from "styled-components";
+import { setMainPage } from "../../store/actions/projects-actions";
 import avatarImg from "../../img/avatar/avatar.jpg";
 
 const StyledAbout = styled.div`
@@ -11,21 +11,25 @@ const StyledAbout = styled.div`
   margin: auto;
   padding: 2rem 2rem;
   overflow: hidden;
+
   h2 {
     color: var(--primary-hover-color);
     margin-bottom: 1rem;
   }
+
   img {
     display: block;
     height: 150px;
     border-radius: 150px;
     margin: auto auto 1rem;
   }
+
   @media (max-width: 768px) {
     height: 100%;
   }
 `;
 
+// eslint-disable-next-line no-shadow
 const About = ({ setMainPage }) => {
   useEffect(() => {
     setMainPage(false);
@@ -47,15 +51,12 @@ const About = ({ setMainPage }) => {
       </p>
       <p>
         I am highly motivated and innovative developer with a keen eye for
-        detail and a strong work ethic. Send me a message and let's discuss
-        everything further. I will be glad to apply my experience and knowledge
-        working on your product!
+        detail and a strong work ethic. Send me a message and let&rsquo;s
+        discuss everything further. I will be glad to apply my experience and
+        knowledge working on your product!
       </p>
     </StyledAbout>
   );
 };
 
-export default connect(
-  null,
-  { setMainPage }
-)(About);
+export default connect(null, { setMainPage })(About);

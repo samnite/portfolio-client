@@ -1,8 +1,6 @@
 import React from "react";
 import { BackTop } from "antd";
 
-const ScrollTop = () => {
-  return <BackTop />;
-};
+const ScrollTop = () => <BackTop />;
 
 export default ScrollTop;

@@ -1,4 +1,4 @@
-const { db } = require("../util/admin");
+const {db} = require("../util/admin");
 
 // Get All Projects
 exports.getAllProjects = (req, res) => {
@@ -14,7 +14,7 @@ exports.getAllProjects = (req, res) => {
       });
       return res.json(projects);
     })
-    .catch(err => res.status(500).json({ error: err.code }));
+    .catch(err => res.status(500).json({error: err.code}));
 };
 
 // Get Single project
@@ -24,7 +24,7 @@ exports.getProject = (req, res) => {
     .get()
     .then(doc => {
       if (!doc.exists) {
-        return res.status(404).json({ error: "Project not found" });
+        return res.status(404).json({error: "Project not found"});
       }
       projectData = doc.data();
       projectData.projectId = doc.id;
@@ -41,6 +41,6 @@ exports.getProject = (req, res) => {
       return res.json(projectData);
     })
     .catch(err => {
-      res.status(500).json({ error: err.code });
+      res.status(500).json({error: err.code});
     });
 };

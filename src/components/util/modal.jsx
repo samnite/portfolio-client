@@ -6,13 +6,17 @@ const StyledModal = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   img {
     width: 100%;
+
     &:hover {
       cursor: zoom-in;
     }
   }
 `;
+
+const StyledImg = styled.img``;
 
 const ModalWindow = ({ img, title }) => {
   const [visible, setVisible] = useState(false);
@@ -26,12 +30,12 @@ const ModalWindow = ({ img, title }) => {
   };
 
   const modalStyle = {
-    top: 20
+    top: 20,
   };
 
   return (
     <StyledModal>
-      <img src={img} alt={title} onClick={showModal} />
+      <StyledImg src={img} alt={title} onClick={showModal} />
       <Modal
         style={modalStyle}
         width="90%"

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { StyledContainer, StyledSpinner } from "../../shared/ui/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
 import { StyledCardLinks } from "../projects/components";
 import ModalWindow from "../util/modal";
-import { Redirect } from "react-router-dom";
+import { StyledContainer, StyledSpinner } from "../../shared/ui/components";
 
 const StyledProject = styled.div`
   display: grid;
@@ -19,6 +19,7 @@ const StyledProject = styled.div`
   margin: 1rem 0;
   justify-content: center;
   align-items: baseline;
+
   h2 {
     color: #333;
   }
@@ -38,10 +39,12 @@ const StyledProject = styled.div`
 `;
 
 const Project = ({
+  // eslint-disable-next-line no-shadow
   getProject,
+  // eslint-disable-next-line no-shadow
   setMainPage,
   match,
-  data: { project, alert }
+  data: { project, alert },
 }) => {
   useEffect(() => {
     setMainPage(false);
@@ -72,7 +75,7 @@ const Project = ({
               <ul>
                 <strong>Techs:</strong>
                 {project.techs &&
-                  project.techs.map(tech => <li key={tech}>{tech}</li>)}
+                  project.techs.map((tech) => <li key={tech}>{tech}</li>)}
               </ul>
             </li>
           </ul>
@@ -106,11 +109,8 @@ const Project = ({
   );
 };
 
-const mapStateToProps = state => ({
-  data: state.data
+const mapStateToProps = (state) => ({
+  data: state.data,
 });
 
-export default connect(
-  mapStateToProps,
-  { getProject, setMainPage }
-)(Project);
+export default connect(mapStateToProps, { getProject, setMainPage })(Project);

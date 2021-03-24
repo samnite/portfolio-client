@@ -1,4 +1,3 @@
-
 const isEmpty = string => {
   return string.trim() === "";
 };

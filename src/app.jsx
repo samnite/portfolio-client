@@ -9,21 +9,19 @@ import NotFound from "./components/pages/not-found";
 import Alert from "./components/util/alert";
 import Admin from "./components/pages/admin";
 
-const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Alert />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/admin" component={Admin} />
-        <Route path="/projects/:project" component={Project} />
-        <Route component={NotFound} />
-      </Switch>
-      <Footer />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Navbar />
+    <Alert />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/admin" component={Admin} />
+      <Route path="/projects/:project" component={Project} />
+      <Route component={NotFound} />
+    </Switch>
+    <Footer />
+  </>
+);
 
 export default App;
