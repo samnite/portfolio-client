@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { animateScroll as scroll, Link } from "react-scroll";
 import { Link as ReactLink, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
 const StyledNavbar = styled.nav`
   position: sticky;
@@ -64,7 +64,9 @@ const StyledNavbar = styled.nav`
   }
 `;
 
-const Navbar = ({ data: { isMain } }) => {
+const Navbar = () => {
+  const { isMain } = useSelector((state) => state.data);
+
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -124,10 +126,6 @@ const Navbar = ({ data: { isMain } }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  data: state.data,
-});
-
-export default connect(mapStateToProps)(Navbar);
+export default Navbar;
 
 // TODO Fix scroll-to-top (main page have no active class)

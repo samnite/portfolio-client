@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button, Form, Input } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import styled from "styled-components";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setMainPage } from "../../store/actions/projects-actions";
 
 const StyledForm = styled(Form)`
@@ -21,10 +21,11 @@ const StyledForm = styled(Form)`
   }
 `;
 
-// eslint-disable-next-line no-shadow
-const Admin = ({ setMainPage }) => {
+const Admin = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setMainPage(false);
+    dispatch(setMainPage(false));
   }, []);
 
   const onFinish = (values) => values;
@@ -68,4 +69,4 @@ const Admin = ({ setMainPage }) => {
   );
 };
 
-export default connect(null, { setMainPage })(Admin);
+export default Admin;

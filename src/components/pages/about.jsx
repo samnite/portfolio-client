@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { setMainPage } from "../../store/actions/projects-actions";
 import avatarImg from "../../img/avatar/avatar.jpg";
+import { setMainPage } from "../../store/actions/projects-actions";
 
 const StyledAbout = styled.div`
   max-width: 800px;
@@ -30,10 +30,11 @@ const StyledAbout = styled.div`
 `;
 
 // eslint-disable-next-line no-shadow
-const About = ({ setMainPage }) => {
+const About = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setMainPage(false);
-    // eslint-disable-next-line
+    dispatch(setMainPage(false));
   }, []);
   return (
     <StyledAbout>
@@ -59,4 +60,4 @@ const About = ({ setMainPage }) => {
   );
 };
 
-export default connect(null, { setMainPage })(About);
+export default About;

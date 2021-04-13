@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { StyledLHead, StyledSpinner } from "../../shared/ui/components";
 import { StyledProjects } from "./components";
 import ProjectItem from "./project-item";
 import { getAllProjects } from "../../store/actions/projects-actions";
 
-// eslint-disable-next-line no-shadow
-const Projects = ({ getAllProjects, data: { projects } }) => {
+const Projects = () => {
+  const dispatch = useDispatch();
+  const { projects } = useSelector((state) => state.data);
+
   useEffect(() => {
-    getAllProjects();
+    dispatch(getAllProjects());
   }, []);
 
   if (projects === null) {
@@ -37,8 +39,4 @@ const Projects = ({ getAllProjects, data: { projects } }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  data: state.data,
-});
-
-export default connect(mapStateToProps, { getAllProjects })(Projects);
+export default Projects;

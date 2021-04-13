@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import Showcase from "../layout/showcase";
 import { StyledContainer } from "../../shared/ui/components";
 import Skills from "../layout/skills";
@@ -10,11 +10,12 @@ import {
 } from "../../store/actions/projects-actions";
 import ScrollTop from "../layout/scroll-top";
 
-// eslint-disable-next-line no-shadow
-const Home = ({ setMainPage, clearProject }) => {
+const Home = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    clearProject();
-    setMainPage(true);
+    dispatch(clearProject());
+    dispatch(setMainPage(true));
   }, []);
   return (
     <>
@@ -28,4 +29,4 @@ const Home = ({ setMainPage, clearProject }) => {
   );
 };
 
-export default connect(null, { setMainPage, clearProject })(Home);
+export default Home;

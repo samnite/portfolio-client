@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { getProject, setMainPage } from "../../store/actions/projects-actions";
 import { StyledCardLinks } from "../projects/components";
@@ -38,18 +38,13 @@ const StyledProject = styled.div`
   }
 `;
 
-const Project = ({
-  // eslint-disable-next-line no-shadow
-  getProject,
-  // eslint-disable-next-line no-shadow
-  setMainPage,
-  match,
-  data: { project, alert },
-}) => {
+const Project = ({ match }) => {
+  const dispatch = useDispatch();
+  const { project, alert } = useSelector((state) => state.data);
+
   useEffect(() => {
-    setMainPage(false);
-    getProject(match.params.project);
-    // eslint-disable-next-line
+    dispatch(setMainPage(false));
+    dispatch(getProject(match.params.project));
   }, [match.params.project]);
 
   if (project === null) {
@@ -109,8 +104,4 @@ const Project = ({
   );
 };
 
-const mapStateToProps = (state) => ({
-  data: state.data,
-});
-
-export default connect(mapStateToProps, { getProject, setMainPage })(Project);
+export default Project;

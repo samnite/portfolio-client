@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { setMainPage } from "../../store/actions/projects-actions";
 
@@ -14,10 +14,11 @@ const StyledError = styled.div`
   }
 `;
 
-// eslint-disable-next-line no-shadow
-const NotFound = ({ setMainPage }) => {
+const NotFound = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setMainPage(false);
+    dispatch(setMainPage(false));
   }, []);
   return (
     <StyledError>
@@ -26,4 +27,4 @@ const NotFound = ({ setMainPage }) => {
   );
 };
 
-export default connect(null, { setMainPage })(NotFound);
+export default NotFound;
