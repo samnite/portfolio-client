@@ -1,20 +1,20 @@
-const {db} = require("../util/admin");
+const { db } = require("../util/admin");
 
 // Get All Projects
 exports.getAllProjects = (req, res) => {
   db.collection("projects")
     .get()
-    .then(data => {
+    .then((data) => {
       const projects = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         projects.push({
           link: doc.id,
-          ...doc.data()
+          ...doc.data(),
         });
       });
       return res.json(projects);
     })
-    .catch(err => res.status(500).json({error: err.code}));
+    .catch((err) => res.status(500).json({ error: err.code }));
 };
 
 // Get Single project
@@ -22,9 +22,9 @@ exports.getProject = (req, res) => {
   let projectData = {};
   db.doc(`/projects/${req.params.projectId}`)
     .get()
-    .then(doc => {
+    .then((doc) => {
       if (!doc.exists) {
-        return res.status(404).json({error: "Project not found"});
+        return res.status(404).json({ error: "Project not found" });
       }
       projectData = doc.data();
       projectData.projectId = doc.id;
@@ -33,14 +33,14 @@ exports.getProject = (req, res) => {
         .where("projectId", "==", req.params.projectId)
         .get();
     })
-    .then(data => {
+    .then((data) => {
       projectData.comments = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         projectData.comments.push(doc.data());
       });
       return res.json(projectData);
     })
-    .catch(err => {
-      res.status(500).json({error: err.code});
+    .catch((err) => {
+      res.status(500).json({ error: err.code });
     });
 };
