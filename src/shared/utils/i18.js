@@ -8,8 +8,11 @@ i18n
       en: {
         translation: {
           firstName: "Alex",
-          secondName: "Grib",
+          secondName: "Gribenchenko",
           fullName: "Alex Gribenchenko",
+          bio:
+            "I’m Ukraine-based developer. I work for clients all over the world. I specialize in front-end development, and I love what I do.",
+          hi: "Hi, I'm ",
           languages: [],
           aboutTitle: "Hi! My name is Alex.",
           aboutBody1:
@@ -28,6 +31,9 @@ i18n
           firstName: "Александр",
           secondName: "Грибенченко",
           fullName: "Александр Грибенченко",
+          bio:
+            "Я разработчик из Украины. Я работаю с клиентами по всему миру. Я специализируюсь на фронтенд-разработке, и мне нравится то, что я делаю.",
+          hi: "Привет, меня зовут ",
           aboutTitle: "Привет! Меня зовут Александр",
           aboutBody1:
             "Если вы ищете кого-то, кто может взяться за дело и любит работать веб-приложениями, я хотел бы, чтобы вы рассмотрели мою кандидатуру. Я Front-End разработчик, который может позаботиться о вашем веб-сайте с нуля до релизной стадии",

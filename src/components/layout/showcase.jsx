@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import background from "img/background/background0.jpg";
 import { Parallax } from "react-parallax";
+import { useTranslation } from "react-i18next";
 
 const StyledShowCase = styled.div`
   height: 600px;
@@ -46,22 +47,23 @@ const StyledShowCaseContent = styled.div`
   }
 `;
 
-const Showcase = () => (
-  <Parallax bgImage={background} strength={600}>
-    <StyledShowCase id="Home">
-      <StyledShowCaseContent>
-        <h1>
-          Hi, I&rsquo;m <span>Alex</span> Gribenchenko
-        </h1>
-        <div>
-          <p>
-            I&rsquo;m Ukraine-based freelancer. I work for clients all over the
-            world. I specialize in front-end development, and I love what I do.
-          </p>
-        </div>
-      </StyledShowCaseContent>
-    </StyledShowCase>
-  </Parallax>
-);
+const Showcase = () => {
+  const { t } = useTranslation();
+
+  return (
+    <Parallax bgImage={background} strength={600}>
+      <StyledShowCase id="Home">
+        <StyledShowCaseContent>
+          <h1>
+            {t("hi")} <span>{t("firstName")}</span> {t("secondName")}
+          </h1>
+          <div>
+            <p>{t("bio")}</p>
+          </div>
+        </StyledShowCaseContent>
+      </StyledShowCase>
+    </Parallax>
+  );
+};
 
 export default Showcase;
