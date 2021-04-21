@@ -1,55 +1,34 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { animateScroll as scroll, Link } from "react-scroll";
-import { Link as ReactLink, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { StyledNavbar, StyledName } from "./styled-components";
 import LanguageSelector from "./language-selector";
 
 const Navbar = () => {
   const { t } = useTranslation();
-  const { isMain } = useSelector((state) => state.data);
-
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
 
   return (
     <StyledNavbar>
       <h1>
-        <ReactLink to="/">
+        <Link to="/">
           <StyledName>Alex</StyledName>Gribenchenko
-        </ReactLink>
+        </Link>
       </h1>
       <ul style={{ alignItems: "center" }}>
         <li>
-          {isMain ? (
-            <Link
-              to=""
-              activeClass="active-nav"
-              spy
-              smooth
-              offset={-70}
-              duration={500}
-              onClick={scrollToTop}
-            >
-              {t("homeNavLink")}
-            </Link>
-          ) : (
-            <ReactLink to="/">{t("homeNavLink")}</ReactLink>
-          )}
+          <Link to="/">{t("homeNavLink")}</Link>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="active-nav">
-            {t("aboutNavLink")}
-          </NavLink>
-        </li>
-        <li>
-          <ReactLink to="/projects" spy smooth offset={-70} duration={500}>
+          <Link to="/projects" spy smooth offset={-70} duration={500}>
             {t("projectsNavLink")}
-          </ReactLink>
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" activeClassName="active-nav">
+            {t("aboutNavLink")}
+          </Link>
         </li>
         <li>
           <a
