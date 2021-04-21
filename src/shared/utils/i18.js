@@ -8,8 +8,11 @@ i18n
       en: {
         translation: {
           firstName: "Alex",
-          secondName: "Grib",
+          secondName: "Gribenchenko",
           fullName: "Alex Gribenchenko",
+          bio:
+            "I’m Ukraine-based developer. I work for clients all over the world. I specialize in front-end development, and I love what I do.",
+          hi: "Hi, I'm ",
           languages: [],
           aboutTitle: "Hi! My name is Alex.",
           aboutBody1:
@@ -21,6 +24,34 @@ i18n
           homeNavLink: "Home",
           aboutNavLink: "About",
           projectsNavLink: "Projects",
+          mySkills: "My Skills",
+          myProjects: "My Projects",
+          description: "Description",
+          techs: "Techs",
+        },
+      },
+      ua: {
+        translation: {
+          firstName: "Олександр",
+          secondName: "Грибенченко",
+          fullName: "Олександр Грибенченко",
+          bio:
+            "Я розробник з України. Я працюю з клієнтами по всьому світу. Я спеціалізуюся на фронтенд-розробці, і мені подобається те, що я роблю.",
+          hi: "Привіт, я ",
+          aboutTitle: "Привіт! Мене звуть Олександр",
+          aboutBody1:
+            "Якщо ви шукаєте когось, хто може взятися за справу і любить працювати з веб-додатками, я хотів би, щоб ви розглянули мою кандидатуру. Я Front-End розробник, який може подбати про ваш веб-сайті з нуля до релізной стадії",
+          aboutBody2:
+            "Мої ключові навички: HTML, CSS, JavaScript,TypeScript, React, Redux, Context API, Firebase, WordPress.",
+          aboutBody3:
+            "Я високомотивований і інноваційний розробник з увагою до деталей і твердої трудової етикою. Надішліть мені електроного листа, і давайте обговоримо усы деталі. Буду радий застосувати свій досвід і знання в роботі над вашим продуктом!",
+          homeNavLink: "Головна",
+          aboutNavLink: "Про мене",
+          projectsNavLink: "Проекти",
+          mySkills: "Мої навички",
+          myProjects: "Мої проекти",
+          description: "Опис",
+          techs: "Технології",
         },
       },
       ru: {
@@ -28,6 +59,9 @@ i18n
           firstName: "Александр",
           secondName: "Грибенченко",
           fullName: "Александр Грибенченко",
+          bio:
+            "Я разработчик из Украины. Я работаю с клиентами по всему миру. Я специализируюсь на фронтенд-разработке, и мне нравится то, что я делаю.",
+          hi: "Привет, я ",
           aboutTitle: "Привет! Меня зовут Александр",
           aboutBody1:
             "Если вы ищете кого-то, кто может взяться за дело и любит работать веб-приложениями, я хотел бы, чтобы вы рассмотрели мою кандидатуру. Я Front-End разработчик, который может позаботиться о вашем веб-сайте с нуля до релизной стадии",
@@ -38,6 +72,10 @@ i18n
           homeNavLink: "Главная",
           aboutNavLink: "Обо мне",
           projectsNavLink: "Проекты",
+          mySkills: "Мои навыки",
+          myProjects: "Мои проекты",
+          description: "Описание",
+          techs: "Технологии",
         },
       },
     },

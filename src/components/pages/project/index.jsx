@@ -1,44 +1,21 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { getProject, setMainPage } from "../../store/actions/projects-actions";
-import { StyledCardLinks } from "../projects/components";
-import ModalWindow from "../util/modal";
-import { StyledContainer, StyledSpinner } from "../../shared/ui/components";
-
-const StyledProject = styled.div`
-  display: grid;
-  height: 90vh;
-  color: #333;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  margin: 1rem 0;
-  justify-content: center;
-  align-items: baseline;
-
-  h2 {
-    color: #333;
-  }
-
-  ul {
-    margin: 1rem;
-    text-align: left;
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    height: 100%;
-    img {
-      width: 180px;
-    }
-  }
-`;
+import { useTranslation } from "react-i18next";
+import {
+  getProject,
+  setMainPage,
+} from "../../../store/actions/projects-actions";
+import { StyledCardLinks } from "../../projects/styled-components";
+import ModalWindow from "../../util/modal";
+import { StyledContainer, StyledSpinner } from "../../../shared/ui/components";
+import { StyledProject } from "./styled-components";
 
 const Project = ({ match }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { project, alert } = useSelector((state) => state.data);
 
@@ -51,7 +28,7 @@ const Project = ({ match }) => {
     if (alert) {
       return <Redirect to="/" />;
     }
-    return <StyledSpinner>Loading...</StyledSpinner>;
+    return <StyledSpinner />;
   }
 
   return (
@@ -64,11 +41,11 @@ const Project = ({ match }) => {
         <div>
           <ul>
             <li>
-              <strong>Description:</strong> {project.description}
+              <strong>{t("description")}:</strong> {project.description}
             </li>
             <li>
               <ul>
-                <strong>Techs:</strong>
+                <strong>{t("techs")}:</strong>
                 {project.techs &&
                   project.techs.map((tech) => <li key={tech}>{tech}</li>)}
               </ul>

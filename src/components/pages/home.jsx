@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import Showcase from "../layout/showcase";
+import Index from "../layout/showcase";
 import { StyledContainer } from "../../shared/ui/components";
 import Skills from "../layout/skills";
-import Projects from "../projects/projects";
+import Projects from "../projects";
 import {
   clearProject,
   setMainPage,
 } from "../../store/actions/projects-actions";
-import ScrollTop from "../layout/scroll-top";
+import ScrollTop from "../layout/scroll-to-top";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Showcase />
+      <Index />
       <StyledContainer>
         <Skills />
         <Projects />

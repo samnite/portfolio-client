@@ -3,7 +3,7 @@ import { Link as ReactLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop, faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { StyledCardLinks, StyledProjectCard } from "./components";
+import { StyledCardLinks, StyledProjectCard } from "./styled-components";
 
 const ProjectItem = ({ title, img, id, link, webLink, gitLink }) => (
   <StyledProjectCard>

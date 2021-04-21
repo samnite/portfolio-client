@@ -29,5 +29,4 @@ yarn.lock
 !/.firebaserc
 !/.firebase/
 /.firebase/
-!/src/components/layout/test.js
 /functions/firebase-debug.log

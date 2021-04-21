@@ -11,6 +11,7 @@ const LanguageSelector = () => (
     onChange={(value) => i18n.changeLanguage(value)}
   >
     <Option value="en">English</Option>
+    <Option value="ua">Українська</Option>
     <Option value="ru">Русский</Option>
   </StyledSelect>
 );
