@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Select } from "antd";
-import media from "../../../shared/utils/media";
+import media from "../../shared/utils/media";
 
 export const StyledNavbar = styled.nav`
   position: sticky;

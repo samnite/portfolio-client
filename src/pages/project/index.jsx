@@ -5,13 +5,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import {
-  getProject,
-  setMainPage,
-} from "../../../store/actions/projects-actions";
-import { StyledCardLinks } from "../../projects/styled-components";
+import { getProject, setMainPage } from "../../store/actions/projects-actions";
+import { StyledCardLinks } from "../../components/projects/styled-components";
 import ModalWindow from "../../util/modal";
-import { StyledContainer, StyledSpinner } from "../../../shared/ui/components";
+import { StyledContainer, StyledSpinner } from "../../shared/ui/components";
 import { StyledProject } from "./styled-components";
 
 const Project = ({ match }) => {

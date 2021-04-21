@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
-import avatarImg from "../../../img/avatar/avatar.jpg";
-import { setMainPage } from "../../../store/actions/projects-actions";
+import avatarImg from "../../img/avatar/avatar.jpg";
+import { setMainPage } from "../../store/actions/projects-actions";
 import { StyledAbout } from "./styled-components";
 
 const About = () => {

@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { animateScroll as scroll, Link } from "react-scroll";
 import { Link as ReactLink, NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { StyledNavbar, StyledName } from "./styled-components";
@@ -48,13 +47,9 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          {isMain ? (
-            <Link to="Projects" spy smooth offset={-70} duration={500}>
-              {t("projectsNavLink")}
-            </Link>
-          ) : (
-            <HashLink to="/#Projects">{t("projectsNavLink")}</HashLink>
-          )}
+          <ReactLink to="/projects" spy smooth offset={-70} duration={500}>
+            {t("projectsNavLink")}
+          </ReactLink>
         </li>
         <li>
           <a
