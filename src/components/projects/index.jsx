@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { StyledLHead, StyledSpinner } from "../../shared/ui/components";
-import { StyledProjects } from "./components";
+import { StyledProjects } from "./styled-components";
 import ProjectItem from "./project-item";
 import { getAllProjects } from "../../store/actions/projects-actions";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { projects } = useSelector((state) => state.data);
 
@@ -14,12 +16,12 @@ const Projects = () => {
   }, []);
 
   if (projects === null) {
-    return <StyledSpinner>Loading...</StyledSpinner>;
+    return <StyledSpinner />;
   }
 
   return (
     <>
-      <StyledLHead id="Projects">Projects</StyledLHead>
+      <StyledLHead id="Projects">{t("myProjects")}</StyledLHead>
       <StyledProjects>
         {projects.map(
           ({ name, thumbnail, live_url, github_url, id, link }, idx) => (
