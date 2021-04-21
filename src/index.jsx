@@ -6,6 +6,7 @@ import { createBrowserHistory } from "history";
 import { ConnectedRouter } from "connected-react-router";
 import App from "./app";
 import store from "./store/store";
+import "./shared/utils/i18";
 
 const history = createBrowserHistory();
 
