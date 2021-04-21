@@ -3,7 +3,7 @@ import { Button, Form, Input } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { setMainPage } from "../../store/actions/projects-actions";
+import { setMainPage } from "../store/actions/projects-actions";
 
 const StyledForm = styled(Form)`
   max-width: 300px;

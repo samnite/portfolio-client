@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { StyledLHead, StyledSpinner } from "../../shared/ui/components";
-import { StyledProjects } from "./styled-components";
+import { StyledProjects, StyledProjectsContainer } from "./styled-components";
 import ProjectItem from "./project-item";
 import { getAllProjects } from "../../store/actions/projects-actions";
 
@@ -20,7 +20,7 @@ const Projects = () => {
   }
 
   return (
-    <>
+    <StyledProjectsContainer>
       <StyledLHead id="Projects">{t("myProjects")}</StyledLHead>
       <StyledProjects>
         {projects.map(
@@ -37,7 +37,7 @@ const Projects = () => {
           )
         )}
       </StyledProjects>
-    </>
+    </StyledProjectsContainer>
   );
 };
 

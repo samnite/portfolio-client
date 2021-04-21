@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { setMainPage } from "../../store/actions/projects-actions";
+import { setMainPage } from "../store/actions/projects-actions";
 
 const StyledError = styled.div`
   display: flex;

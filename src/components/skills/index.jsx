@@ -9,9 +9,9 @@ import {
   faWordpressSimple,
 } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
-import tsLogo from "../../../img/logos/typescript.svg";
-import firebaseLogo from "../../../img/logos/firebase.svg";
-import { StyledLHead } from "../../../shared/ui/components";
+import tsLogo from "../../img/logos/typescript.svg";
+import firebaseLogo from "../../img/logos/firebase.svg";
+import { StyledLHead } from "../../shared/ui/components";
 import { StyledSkills, StyledSkillCard } from "./styled-components";
 
 const Skills = () => {

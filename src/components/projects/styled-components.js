@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const StyledProjectsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+`;
+
 export const StyledProjects = styled.div`
   display: grid;
   grid-gap: 1rem;
@@ -12,6 +19,7 @@ export const StyledProjects = styled.div`
     align-content: center;
   }
 `;
+
 export const StyledProjectCard = styled.div`
   text-align: center;
   color: #333;
