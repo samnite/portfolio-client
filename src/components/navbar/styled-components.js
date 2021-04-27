@@ -49,6 +49,7 @@ export const StyledNavbar = styled.nav`
 
   ${media().mobile`
     justify-content: center;
+    padding: 1rem 0;
     ul {
       margin-top: 0.5rem;
     }
@@ -67,7 +68,10 @@ export const StyledSelect = styled(Select)`
   }
 
   ${media().mobile`
-    width: 80%;
+    width: 40%;
     padding-top: 10px;
+    .ant-select-arrow {
+      padding-top: 4px;
+    }
   `}
 `;
