@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../utils/media";
 
 export const StyledPrimaryButton = styled.a`
   display: inline-block;
@@ -21,6 +22,9 @@ export const StyledContainer = styled.div`
   margin: auto;
   padding: 0 2rem;
   overflow: hidden;
+  ${media().mobile`
+    padding: 0 0.5rem;
+  `}
 `;
 
 export const StyledLHead = styled.h1`

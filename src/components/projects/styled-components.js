@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import media from "../../shared/utils/media";
 
 export const StyledProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1100px;
   margin: 0 auto;
+  ${media().mobile`
+    padding-bottom: 2rem;
+  `}
 `;
 
 export const StyledProjects = styled.div`
@@ -12,12 +16,12 @@ export const StyledProjects = styled.div`
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 1.5rem;
-  @media (max-width: 768px) {
-    grid-template-columns: 90%;
-    align-self: center;
-    justify-content: center;
-    align-content: center;
-  }
+  ${media().mobile`
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+  `}
 `;
 
 export const StyledProjectCard = styled.div`
@@ -26,7 +30,7 @@ export const StyledProjectCard = styled.div`
   justify-content: center;
   background: #eff1ec;
   padding: 1rem 0.5rem;
-  border-radius: 25px;
+  border-radius: 10px;
 
   h3 {
     color: #333;
@@ -56,21 +60,7 @@ export const StyledProjectCard = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    &:nth-child(6) {
-      img {
-        height: 120px;
-        width: 200px;
-      }
-    }
-
-    &:nth-child(7) {
-      img {
-        height: 120px;
-        width: 200px;
-      }
-    }
-
+  ${media().mobile`
     img {
       padding: 0.5rem;
     }
@@ -92,7 +82,7 @@ export const StyledProjectCard = styled.div`
         transform: none;
       }
     }
-  }
+  `}
 `;
 
 export const StyledCardLinks = styled.div`
@@ -102,17 +92,16 @@ export const StyledCardLinks = styled.div`
 
   a {
     color: #444;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
     margin: 0 5px;
-    border-radius: 10px;
+    border-radius: 4px;
     transition: all 0.5s;
 
     &:hover {
       background: var(--primary-hover-color);
     }
   }
-
-  @media (max-width: 768px) {
+  ${media().mobile`
     justify-content: center;
     a {
       margin: 0 2px;
@@ -120,15 +109,15 @@ export const StyledCardLinks = styled.div`
     }
 
     #more:after {
-      content: " More";
+      content: " ${({ t }) => t("moreTitle")}";
     }
 
     #demo:after {
-      content: " Demo";
+      content: " ${({ t }) => t("demoTitle")}";
     }
 
     #src:after {
-      content: " Src";
+      content: " ${({ t }) => t("srcTitle")}";
     }
-  }
+  `}
 `;

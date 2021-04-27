@@ -16,7 +16,7 @@ export const StyledSkillCard = styled.div`
   justify-content: center;
   background: #eff1ec;
   padding: 1rem 0.5rem;
-  border-radius: 25px;
+  border-radius: 10px;
 
   h2 {
     font-size: 1rem;
