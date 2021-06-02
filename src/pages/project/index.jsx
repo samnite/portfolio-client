@@ -48,7 +48,7 @@ const Project = ({ match }) => {
               </ul>
             </li>
           </ul>
-          <StyledCardLinks>
+          <StyledCardLinks t={t}>
             {project.live_url && (
               <a
                 href={project.live_url}
