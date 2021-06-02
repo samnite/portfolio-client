@@ -44,7 +44,6 @@ export const StyledNavbar = styled.nav`
   }
 
   .active-nav {
-    //background: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
     border-radius: unset;
     &:hover {
