@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../shared/utils/media";
 
 export const StyledProject = styled.div`
   display: grid;
@@ -19,11 +20,11 @@ export const StyledProject = styled.div`
     text-align: left;
   }
 
-  @media (max-width: 768px) {
+  ${media().mobile`
     grid-template-columns: 1fr;
     height: 100%;
     img {
       width: 180px;
     }
-  }
+  `};
 `;
